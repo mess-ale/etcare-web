@@ -17,7 +17,7 @@
         <div class="text-primary text-sm">
           By <span class="font-medium">EtCare</span> | Event Date: {{ blogData.event_date }}
         </div>
-        <img v-if="blogData.blog_image" :src="`http://127.0.0.1:8000${blogData.blog_image}`" alt="Blog Image"
+        <img v-if="blogData.blog_image" :src="`https://django.etcaresacco.com${blogData.blog_image}`" alt="Blog Image"
           class="rounded-lg shadow-md w-full" />
         <p class="text-lg leading-7 text-primary text-justify">{{ blogData.content }}</p>
 

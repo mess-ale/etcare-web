@@ -1,5 +1,5 @@
 <template>
-    <div class="text-primary pb-8">
+    <div class="text-primary pb-8 font-sens text-justify">
         <ServiceCard text="Loan" imgservice="/service/loan-p.png" />
         <div class="body-padding_margin">
             <div class="container">
@@ -103,11 +103,11 @@
 
                             <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Business loans.</h1>
-                                <li>Loans for urban agriculture;
-                                    Small business loans;
-                                    Loans for service work;
-                                    Loans for manufacturing;
-                                    Construction loan;
+                                <li>Loans for urban agriculture
+                                    Small business loans
+                                    Loans for service work
+                                    Loans for manufacturing
+                                    Construction loan
                                     Loans for home purchase, construction and renovation
                                     Housing</li>
                                 <li>Business house
@@ -150,7 +150,7 @@
                                     months.
                                 </li>
                                 <li>6/six months/more than 20% normal savings and 10% lottery Own member gets a business
-                                    loan;
+                                    loan
                                     the
                                     loan limit is 750,000.00 and the repayment period is up to It will be up to 48
                                     months.</li>

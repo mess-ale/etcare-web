@@ -18,7 +18,7 @@
 
         <div v-else class="body-padding_margin mb-10">
             <div class="container">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <blog-component v-for="(blog, index) in blogPosts" :key="index" :blog_id="blog.blog_id"
                         :title="blog.title" :image="blog.blog_image" :content="blog.content" author="EtCare"
                         :publishedAt="blog.event_date" />

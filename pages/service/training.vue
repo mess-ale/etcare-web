@@ -1,5 +1,5 @@
 <template>
-    <div class="text-primary pb-8">
+    <div class="text-primary pb-8 font-sens text-justify">
         <ServiceCard text="Training" imgservice="/service/training.JPG" />
         <div class="body-padding_margin ">
             <div class="container">
@@ -96,7 +96,7 @@
 
                         <ul class="list-disc pl-5">
                             <h1 class="saving-title">Regular savings</h1>
-                            <li>A member must save a minimum regular savings amount of 750.00;</li>
+                            <li>A member must save a minimum regular savings amount of 750.00</li>
                             <li>Standard savings rate is based on the member's saving capacity and is based on the
                                 member's
                                 application
@@ -118,9 +118,9 @@
                                 opened.</li>
                             <li>Interest for the member's savings as determined by the cooperative's bylaws It may be
                                 thought,
-                                Demand savings can be spent by the member at any time;</li>
-                            <li>Demand savings member can provide loan guarantee;</li>
-                            <li>The member may spend interest savings only if the funds are not held as collateral;</li>
+                                Demand savings can be spent by the member at any time</li>
+                            <li>Demand savings member can provide loan guarantee</li>
+                            <li>The member may spend interest savings only if the funds are not held as collateral</li>
                         </ul>
 
                         <ul class="list-disc pl-5">
@@ -148,7 +148,7 @@
                                 certain
                                 period
                                 Time
-                                may accrue a non-payable time limit savings to the depositor;</li>
+                                may accrue a non-payable time limit savings to the depositor</li>
                             <li> Reserve the member's time limit savings for loan guarantee in the cooperative can
                             </li>
                             <li>The cooperative can encourage time saving It will be only when it is confirmed that the
@@ -173,7 +173,7 @@
                                 will
                                 benefit
                             </li>
-                            <li>Interest-free savings can be used as loan collateral;</li>
+                            <li>Interest-free savings can be used as loan collateral</li>
                             <li>The member can spend the savings without considering the interest, the money as a
                                 guarantee
                                 Only
@@ -202,7 +202,7 @@
                             <li>Children will earn interest on their savings, but the savings interest will be added to
                                 the
                                 savings.</li>
-                            <li>Children's savings are used as a loan guarantee for the parents or guardians;</li>
+                            <li>Children's savings are used as a loan guarantee for the parents or guardians</li>
                             <li>Children's savings account is an account that can be opened together with parents to
                                 spend
                                 whenever
@@ -225,7 +225,7 @@
                                 the
                                 savings.
                             </li>
-                            <li>Women's savings are used as loan collateral;</li>
+                            <li>Women's savings are used as loan collateral</li>
                         </ul>
                     </div>
                 </div>

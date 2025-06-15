@@ -1,5 +1,7 @@
 <template>
     <div class="web-body">
+        <Preloader />
+
         <header :style="{ backgroundColor: headerBackgroundColor }" class="fixed z-in top-0 left-0 right-0 text-primary
             body-padding_margin">
             <div class="container">
@@ -215,13 +217,15 @@
 
                         <div class="space-y-3">
                             <h4 class="mb-4 font-bold font-oswald">LATEST NEWS</h4>
-
-                            <footerblogco v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
-                                :description="blog.title" :imageSrc="blog.blog_image" :content="blog.content"
-                                author="EtCare" :date="blog.event_date" />
+                            <div class="grid grid-cols-1 gap-4">
+                                <footerblogco v-for="(blog, index) in blogPostsLetest" :key="index"
+                                    :blog_id="blog.blog_id" :description="blog.title" :imageSrc="blog.blog_image"
+                                    :content="blog.content" author="EtCare" :date="blog.event_date" />
+                            </div>
                         </div>
                         <div>
-                            <h5 class="mb-4 md:text-2xl lg:text-3xl text-center font-Madimi font-bold">EtCare SACCOs</h5>
+                            <h5 class="mb-4 md:text-2xl lg:text-3xl text-center font-Madimi font-bold">Let’s Grow together
+                            </h5>
                             <div class="flex justify-center pt-5">
                                 <nuxt-link to="/contact"
                                     class="etcare-button xs:pt-1 xxxs:pb-1 xxxs:pl-5 xxxs:pr-5 md:pt-2 md:pb-2 md:pl-8 md:pr-8 footer-button flex items-center space-x-4">
@@ -381,6 +385,7 @@ onBeforeUnmount(() => {
 .z-in {
     z-index: 100;
 }
+
 .container {
     max-width: 1240px;
     /* Adjust this value as per your design */

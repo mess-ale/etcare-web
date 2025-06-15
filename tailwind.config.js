@@ -21,6 +21,7 @@ export default {
           oswald: ['Oswald', 'sans-serif'],
           roboto: ['Roboto', 'sans-serif'],
           Madimi: ['Madimi One', 'sans-serif'],
+          sans: ['sans-serif'],
         },
         fontSize: {
           'xxs': '0.6rem',

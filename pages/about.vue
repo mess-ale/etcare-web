@@ -158,10 +158,10 @@ const teamMembers = ref([
         bio: "Luna helps clients achieve their financial goals. She's dedicated to providing excellent service and building strong relationships."
     },
     { 
-        name: 'Johnny', 
-        role: 'Driver', 
-        image: '/team/PicJohnny1.jpg', 
-        bio: "Johnny ensures everyone gets where they need to go safely and on time. He's reliable and courteous, always with a smile."
+        name: 'Samri', 
+        role: 'Loan Officer', 
+        image: '/team/PicSamri.jpg', 
+        bio: "Samri helps clients navigate the loan process with ease. she's knowledgeable and supportive, ensuring a smooth experience."
     },
     { 
         name: 'Hanan', 
@@ -188,12 +188,6 @@ const teamMembers = ref([
         bio: "Redu provides friendly and efficient service to customers. She's patient and helpful, always ready to assist."
     },
     { 
-        name: 'Samri', 
-        role: 'Loan Officer', 
-        image: '/team/PicSamri.jpg', 
-        bio: "Samri helps clients navigate the loan process with ease. she's knowledgeable and supportive, ensuring a smooth experience."
-    },
-    { 
         name: 'Selam', 
         role: 'Loan Officer', 
         image: '/team/PicSelam.jpg', 
@@ -216,6 +210,12 @@ const teamMembers = ref([
         role: 'IT Officer',  
         image: '/team/PicMeseret.jpg', 
         bio: 'Meseret is a tech expert, ensuring the company\'s systems are secure and up-to-date. he\'s a valuable asset to the IT team.' 
+    },
+    { 
+        name: 'Johnny', 
+        role: 'Driver', 
+        image: '/team/PicJohnny1.jpg', 
+        bio: "Johnny ensures everyone gets where they need to go safely and on time. He's reliable and courteous, always with a smile."
     },
 ]);
 

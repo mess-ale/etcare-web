@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class=" font-sens text-justify">
         <ServiceCard text="service" imgservice="/service/service.png" />
 
         <div class="xxxs:py-6 md:py-10">

@@ -1,14 +1,14 @@
 <template>
-  <div class="flex items-center max-w-xs">
-    <img :src="`http://127.0.0.1:8000${imageSrc}`" alt="Image" class=" w-20 h-20 pr-3 rounded-md object-cover" />
-    <nuxt-link :to="`/blog/${blog_id}`" class="foter-class">
+  <nuxt-link :to="`/blog/${blog_id}`" class="foter-button">
+    <div class="flex items-center max-w-xs foter-class">
+      <img :src="`https://django.etcaresacco.com${imageSrc}`" alt="Image"
+        class=" w-20 h-20 pr-3 object-cover" />
       <div>
         <p class="text-sm">{{ description }}</p>
         <p class="text-sm font-bold mt-1">{{ date }}</p>
       </div>
-    </nuxt-link>
-
-  </div>
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -27,17 +27,17 @@ export default {
 
 <style scoped>
 .foter-class {
-  transition: all 0.35s ease-in-out; 
+  transition: all 0.35s ease-in-out;
 }
 
 .foter-class:hover {
   font-weight: bold;
-  transform: scale(1.05); 
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.04);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.foter-class:not(:hover) { 
-    transform: scale(1.0); 
-    text-shadow: none; 
+.foter-class:not(:hover) {
+  transform: scale(1.0);
+  text-shadow: none;
 }
 </style>

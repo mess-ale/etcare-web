@@ -323,7 +323,7 @@ console.log(form)
 </script>
 
 
-<style>
+<style scoped>
 body {
     background-color: #f9fafb;
     font-family: Arial, sans-serif;

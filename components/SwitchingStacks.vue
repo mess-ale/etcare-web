@@ -71,7 +71,7 @@ import SvgComp from './SvgComp.vue';
 const slides = ref([
   { src: '/homepage1.jpeg', caption: 'Image caption 1' },
   { src: '/homepage2.jpg', caption: 'Image caption 2' },
-  { src: '/homepage3.jpeg', caption: 'Image caption 3' },
+  { src: '/homepage3.png', caption: 'Image caption 3' },
   { src: '/homepage4.jpeg', caption: 'Image caption 4' },
 ]);
 

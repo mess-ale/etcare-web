@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.9.0",
+    "@nuxtjs/i18n": "^9.5.5",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@pinia/nuxt": "^0.7.0",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
-    "gsap": "^3.12.7",
+    "gsap": "^3.13.0",
     "next": "^15.2.3",
     "nuxt": "^3.16.0",
     "nuxt-icon": "^1.0.0-beta.7",

@@ -1,13 +1,13 @@
 <template>
     <div>
-        <serviceCard text="Contact Us" imgservice="/2.jpg" />
+        <serviceCard :text="$t('contact.title')" imgservice="/2.jpg" />
         <div class="">
             <div class="body-padding_margin">
                 <div class="container">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="space-y-8 mb-10">
                             <div class="space-y-2">
-                                <h1 class="font-oswald xxxs:text-3xl md:text-3xl font-bold text-secondary">ADDRESS</h1>
+                                <h1 class="font-oswald xxxs:text-3xl md:text-3xl font-bold text-secondary">{{ $t("contact.addressLabel")}}</h1>
                                 <div class="flex items-center space-x-4 text-secondary font-robot">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         viewBox="0 0 24 24">
@@ -15,7 +15,7 @@
                                             d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22">
                                         </path>
                                     </svg>
-                                    <p class="text-primary">head office 22 mazoria ,Golagol</p>
+                                    <p class="text-primary">{{ $t("contact.addressText")}}</p>
                                 </div>
                                 <div class="flex items-center space-x-4 text-secondary font-oswald">
 
@@ -26,6 +26,16 @@
                                         </path>
                                     </svg>
                                     <p class="text-primary">+251-96-454-0000</p>
+                                </div>
+                                <div class="flex items-center space-x-4 text-secondary font-oswald">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3">
+                                        </path>
+                                    </svg>
+                                    <p class="text-primary">+251-11-666-2529</p>
                                 </div>
                                 <div class="flex items-center space-x-4 text-secondary font-robot">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
@@ -39,8 +49,7 @@
                             </div>
 
                             <div class="space-y-2">
-                                <h1 class="font-oswald  xxxs:text-3xl md:text-3xl  font-bold text-secondary">WORKING
-                                    HOURS</h1>
+                                <h1 class="font-oswald  xxxs:text-3xl md:text-3xl  font-bold text-secondary">{{ $t("contact.workingHoursLabel")}}</h1>
                                 <div class="flex items-center space-x-4 text-secondary font-robot">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         viewBox="0 0 24 24">
@@ -48,13 +57,12 @@
                                             d="M8 14q.425 0 .713-.288T9 13t-.288-.712T8 12t-.712.288T7 13t.288.713T8 14m4 0q.425 0 .713-.288T13 13t-.288-.712T12 12t-.712.288T11 13t.288.713T12 14m4 0q.425 0 .713-.288T17 13t-.288-.712T16 12t-.712.288T15 13t.288.713T16 14m-4 8q-1.875 0-3.512-.712t-2.85-1.925t-1.925-2.85T3 13t.713-3.512t1.924-2.85t2.85-1.925T12 4t3.513.713t2.85 1.925t1.925 2.85T21 13t-.712 3.513t-1.925 2.85t-2.85 1.925T12 22M5.6 2.35L7 3.75L2.75 8l-1.4-1.4zm12.8 0l4.25 4.25l-1.4 1.4L17 3.75zM12 20q2.925 0 4.963-2.037T19 13t-2.037-4.962T12 6T7.038 8.038T5 13t2.038 4.963T12 20">
                                         </path>
                                     </svg>
-                                    <p class="text-primary">2:00 am to 11:00pm on Weekdays and saturday</p>
+                                    <p class="text-primary">{{ $t("contact.workingHoursText")}}</p>
                                 </div>
                             </div>
 
                             <div class="space-y-2">
-                                <h1 class="font-oswald  xxxs:text-3xl md:text-3xl  font-bold text-secondary">FOLLOW US
-                                </h1>
+                                <h1 class="font-oswald  xxxs:text-3xl md:text-3xl  font-bold text-secondary">{{ $t("contact.followUs")}}</h1>
                                 <div class="flex space-x-3">
                                     <nuxt-link to="https://web.facebook.com/etcaresacco" target="_blank"><svg
                                             class="socialM text-primary" xmlns="http://www.w3.org/2000/svg" width="2em"

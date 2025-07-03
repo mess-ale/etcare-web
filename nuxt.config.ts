@@ -10,12 +10,12 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'am', name: 'Amharic', file: 'am.json' }
     ],
-    defaultLocale: 'am',
+    defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       alwaysRedirect: false,
-      fallbackLocale: 'am'
+      fallbackLocale: 'en'
     },
   },
 

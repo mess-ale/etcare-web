@@ -1,6 +1,6 @@
 <template>
     <div class=" font-sens text-justify">
-        <ServiceCard text="service" imgservice="/service/service.png" />
+        <ServiceCard :text="$t('servicespage.pagetitle')" imgservice="/service/service.png" />
 
         <div class="xxxs:py-6 md:py-10">
             <div class="body-padding_margin">
@@ -8,13 +8,10 @@
                     <div class="space-y-2 pb-2">
                         <h1
                             class="text-center text-primary font-oswald font-bold xxxs:text-2xl sm:text-3xl md:text-4xl">
-                            Etcare SACCO Services</h1>
+                            {{ $t("servicespage.title") }}</h1>
                         <p
                             class="text-center text-primary font-light font-oswald xxxs:text-base sm:text-lg lg:text-base">
-                            Our services include Savings, Loans,
-                            Training, and the digital Equb system, all designed to meet your specific needs and
-                            help you
-                            achieve your financial goals.
+                            {{ $t("servicespage.description")}}
                         </p>
                     </div>
                 </div>
@@ -30,18 +27,10 @@
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright1 }" class="offscreenright" ref="myElementright1">
                             <div class="space-y-4 p-4">
-                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">Saving</h1>
+                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.saving.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
-                                    We
-                                    understand the importance of saving
-                                    for
-                                    the future, which is why we offer convenient and flexible savings options to help
-                                    our
-                                    members
-                                    build financial security. Whether it's short-term goals or long-term planning, our
-                                    savings
-                                    accounts provide a safe and reliable way to grow your money.</p>
+                                    {{ $t("servicespage.saving.text") }}</p>
                                 <div class="flex">
                                     <nuxt-link class="service-button items-center text-xl flex space-x-4 font-roboto"
                                         to="/service/saving">
@@ -51,25 +40,17 @@
                                                 d="m7.45 17.45l-1.4-1.4L9.075 13H2v-2h7.075L6.05 7.95l1.4-1.4L12.9 12zM13 17v-2h9v2zm0-8V7h9v2zm3 4v-2h6v2z">
                                             </path>
                                         </svg>
-                                        <span>Learn More</span>
+                                        <span>{{ $t("servicespage.saving.button") }}</span>
                                     </nuxt-link>
                                 </div>
                             </div>
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft2 }" class="offscreenleft" ref="myElementleft2">
                             <div class="space-y-4 p-4">
-                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">Training</h1>
+                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.training.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
-                                    We
-                                    understand the importance of saving
-                                    for
-                                    the future, which is why we offer convenient and flexible savings options to help
-                                    our
-                                    members
-                                    build financial security. Whether it's short-term goals or long-term planning, our
-                                    savings
-                                    accounts provide a safe and reliable way to grow your money.</p>
+                                    {{ $t("servicespage.training.text") }}</p>
                                 <div class="flex">
                                     <nuxt-link
                                         class="service-button items-center text-xl flex space-x-4 font-roboto"
@@ -80,7 +61,7 @@
                                                 d="m7.45 17.45l-1.4-1.4L9.075 13H2v-2h7.075L6.05 7.95l1.4-1.4L12.9 12zM13 17v-2h9v2zm0-8V7h9v2zm3 4v-2h6v2z">
                                             </path>
                                         </svg>
-                                        <span>Learn More</span>
+                                        <span>{{ $t("servicespage.training.button") }}</span>
                                     </nuxt-link>
                                 </div>
                             </div>
@@ -94,14 +75,10 @@
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright3 }" class="offscreenright" ref="myElementright3">
                             <div class="space-y-4 p-4">
-                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">Equb</h1>
+                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.equb.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
-                                    Join our equb community and experience the power of collective savings and
-                                    investment. Through equb, members pool their resources to support each other in
-                                    achieving their financial goals. Whether it's purchasing assets, funding education,
-                                    or undertaking community projects, equb offers a collaborative approach to financial
-                                    empowerment.</p>
+                                    {{ $t("servicespage.equb.text") }}</p>
                                 <div class="flex">
                                     <nuxt-link
                                         class="service-button items-center text-xl flex space-x-4 font-roboto"
@@ -112,20 +89,17 @@
                                                 d="m7.45 17.45l-1.4-1.4L9.075 13H2v-2h7.075L6.05 7.95l1.4-1.4L12.9 12zM13 17v-2h9v2zm0-8V7h9v2zm3 4v-2h6v2z">
                                             </path>
                                         </svg>
-                                        <span>Learn More</span>
+                                        <span>{{ $t("servicespage.equb.button") }}</span>
                                     </nuxt-link>
                                 </div>
                             </div>
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft4 }" class="offscreenleft" ref="myElementleft4">
                             <div class="space-y-4 p-4">
-                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">loan</h1>
+                                <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.loan.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
-                                    Our credit services are designed to empower our members with access to affordable
-                                    and flexible loans. Whether you're looking to fund a business venture, cover
-                                    unexpected expenses, or invest in personal development, we're here to support you
-                                    every step of the way.</p>
+                                    {{ $t("servicespage.loan.text") }}</p>
                                 <div class="flex">
                                     <nuxt-link
                                         class="service-button items-center text-xl flex space-x-4 font-roboto"
@@ -136,7 +110,7 @@
                                                 d="m7.45 17.45l-1.4-1.4L9.075 13H2v-2h7.075L6.05 7.95l1.4-1.4L12.9 12zM13 17v-2h9v2zm0-8V7h9v2zm3 4v-2h6v2z">
                                             </path>
                                         </svg>
-                                        <span>Learn More</span>
+                                        <span>{{ $t("servicespage.loan.button") }}</span>
                                     </nuxt-link>
                                 </div>
                             </div>

@@ -4,6 +4,7 @@
 .nuxt
 .nitro
 .cache
+dist
 # Node dependencies
 node_modules
 
@@ -15,7 +16,7 @@ logs
 .DS_Store
 .fleet
 .idea
-
+dist.zip
 # Local env files
 .env
 .env.*

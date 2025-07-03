@@ -1,8 +1,19 @@
 {
   "menu": ["HOME", "SERVICE", "ABOUT", "BLOG", "CONTACT", "JOIN US"],
-  "heroText": "Join a Community of Collective Savings with Equb – Build Wealth Together for a Brighter Future!",
+  "heroText": [
+    "EtCare encourages a culture of saving by offering various savings options. ",
+    "EtCare offers several types of loans to serve different needs. ",
+    "Equb is a collective community financial arrangement established by the EtCare association, in which any member can easily participate.",
+    "To improve financial literacy, EtCare provides financial education and training to the community. "
+  ],
   "readMore": "Read More",
-  "services": ["Saving", "Loan", "Equb", "Training"],
+  "services": ["Saving", "Equb", "Loan", "Training"],
+  "servicesbottem": [
+    "Saving Service",
+    "Loan Service",
+    "Equb Service",
+    "Training Service"
+  ],
   "whoWeAreTitle": "Who we are",
   "whoWeAreText": "EtCare SACCO is a member‑owned financial cooperative dedicated to improving the financial well‑being of our members. Established in 2022, we operate under Ethiopian Cooperative Society regulations, serving employees of EtCare PLC and Et‑herbal manufacturing PLC. Our vision is to empower our members to achieve middle‑level income and entrepreneurial success by 2030. Through strategic planning and a commitment to operational excellence, we provide diverse financial services, including savings and loan products, tailored to meet the unique needs of our community. We are guided by cooperative principles and a dedication to growing together.",
   "learnMore": "Learn More",
@@ -18,9 +29,494 @@
   "contactUs": "CONTACT US",
   "address": "head office 22 mazoria ,Golagol",
   "phone": "+251-96-454-0000",
+  "companytitle": "COMPANY",
   "company": ["About", "Service", "Blog", "Saving", "Equb", "Loan"],
   "latestNews": "LATEST NEWS",
   "footerText": "Let’s Grow together",
   "footerContact": "contact us",
-  "copyright": "© 2024 by EtCare Sacco. All Rights Reserved."
+  "copyright": "© 2024 by EtCare Sacco. All Rights Reserved.",
+  "contact": {
+    "title": "Contact Us",
+    "addressLabel": "ADDRESS",
+    "addressText": "head office 22 mazoria ,Golagol",
+    "phone": "+251-96-454-0000",
+    "workingHoursLabel": "WORKING HOURS",
+    "workingHoursText": "2:00 am to 11:00pm on Weekdays and saturday",
+    "followUs": "FOLLOW US"
+  },
+  "about": {
+    "title": "About",
+    "building1": "Etcare SACCOs Ltd is a leading financial cooperative dedicated to empowering individuals and communities through innovative financial solutions.",
+    "building2": "We are driven by the mission of financial literacy and inclusion, ensuring that every member has access to the knowledge and resources needed to make sound financial decisions. Through education and transparent practices, we strive to uplift our members and foster long-term financial stability. and transparent practices, we strive to uplift our members and foster long-term financial stability. and transparent practices, we strive to uplift our members and foster long-term financial stability.",
+    "AboutTitle": "About Us",
+    "Abouttext": "At Etcare SACCOs Ltd, we're known for our professionalism and dedication in finance. Our main goal is to become the best savings and credit cooperative society by 2030, helping our members improve their lives. Using the latest technology, we offer a wide range of services like savings, loans, and banking that fit everyone's needs. We always stick to honesty, transparency, and accountability in everything we do. Our mission is to teach people about money and make sure everyone benefits from our services. Our values include loyalty, honesty, clear communication, responsibility, and helping others. We're committed to creating a strong financial future for our members and our community.",
+    "quality": "Our Best Quality",
+    "qualityText": "At Etcare SACCOs Ltd, we pride ourselves on delivering exceptional quality in every aspect of our services. Our commitment to excellence is driven by a deep understanding of our members' needs and a desire to exceed their expectations.",
+    "contactUs": "contact us",
+    "team": "OUR TEAM",
+    "teamText": "The Hardworking Team behind Etcare SACCO"
+  },
+  "servicespage": {
+    "pagetitle": "Service",
+    "title": "Etcare SACCO Services",
+    "description": "Our services include Savings, Loans, Training, and the digital Equb system, all designed to meet your specific needs and help you achieve your financial goals.",
+    "saving": {
+      "title": "Saving",
+      "text": "We understand the importance of saving for the future, which is why we offer convenient and flexible savings options to help our members build financial security. Whether it's short-term goals or long-term planning, our savings accounts provide a safe and reliable way to grow your money.",
+      "button": "Learn More"
+    },
+    "training": {
+      "title": "Training",
+      "text": "We understand the importance of saving for the future, which is why we offer convenient and flexible savings options to help our members build financial security. Whether it's short-term goals or long-term planning, our savings accounts provide a safe and reliable way to grow your money.",
+      "button": "Learn More"
+    },
+    "equb": {
+      "title": "Equb",
+      "text": "Join our equb community and experience the power of collective savings and investment. Through equb, members pool their resources to support each other in achieving their financial goals. Whether it's purchasing assets, funding education, or undertaking community projects, equb offers a collaborative approach to financial empowerment.",
+      "button": "Learn More"
+    },
+    "loan": {
+      "title": "Loan",
+      "text": "Our credit services are designed to empower our members with access to affordable and flexible loans. Whether you're looking to fund a business venture, cover unexpected expenses, or invest in personal development, we're here to support you every step of the way."
+    }
+  },
+  "blog": {
+    "blogtitle": "Etcare SACCO BLOG",
+    "blogtext": "Sharing training insights, the latest L&D trends, and tips to improve your training and development here."
+  },
+  "savings": {
+    "title": "Savings",
+    "types": {
+      "title": "Types and Implementation of Savings",
+      "intro": "According to the cooperative society's bylaws, there will be regular savings, demand savings, time deposit savings, interest-free savings, children's savings, home savings, transport vehicle savings, and automobile savings.",
+      "regularSaving": {
+        "title": "Regular Saving",
+        "details": [
+          "The minimum regular saving amount for a member must be 750.00 ETB.",
+          "The regular saving amount should consider the member's saving capacity and be stated on the member's application and approved by the cooperative society.",
+          "Members will receive interest on regular savings as determined by the cooperative society's bylaws."
+        ]
+      },
+      "demandSaving": {
+        "title": "Demand Saving",
+        "details": [
+          "The amount of demand saving will be determined based on the user's capacity and needs. Accordingly, a saving account must be opened with a minimum of 500.00 ETB, and after the account is opened, a minimum of 100.00 ETB must be saved.",
+          "Members will be entitled to interest on demand savings as determined by the cooperative society's bylaws.",
+          "Members can withdraw demand savings at any time.",
+          "Demand savings can be used as collateral for loans.",
+          "Members can only withdraw demand savings if the money is not held as collateral."
+        ]
+      },
+      "timeDepositSaving": {
+        "title": "Time Deposit Saving",
+        "details": [
+          "The minimum time deposit amount will be 50,000.00 ETB.",
+          "The minimum deposit period is six months, and the interest rate for six months will be 8-12%, determined by the amount and duration of the deposit. If the deposit amount is above 500,000 ETB and deposited for more than two years, the interest rate will be determined by agreement with the management committee. However, it should not exceed 13.5 percent.",
+          "The cooperative society may collect time deposit savings that are not payable to the depositor for a certain period, based on agreement with its members as necessary.",
+          "Members can pledge their time deposit savings in the cooperative society as collateral for loans.",
+          "Time deposit savings used as loan collateral will not be paid out to the member until the collateral is released.",
+          "The cooperative society can only encourage time deposit savings when it is confirmed that its capacity to utilize time deposit savings is high."
+        ]
+      },
+      "interestFreeSaving": {
+        "title": "Interest-Free Saving",
+        "details": [
+          "The cooperative society will have interest-free savings that members deposit for various reasons based on their needs and agreement with the cooperative society.",
+          "Members will not have the right to claim interest on interest-free savings under any circumstances; however, if they request interest through an application and it is approved, they will become eligible for interest.",
+          "Interest-free savings can be used as collateral for loans.",
+          "Members can only withdraw interest-free savings if the money is not held as collateral."
+        ]
+      },
+      "childrenSaving": {
+        "title": "Children's Saving",
+        "details": [
+          "Children under 18 years of age who are members of the cooperative society and children they manage can save.",
+          "Children do not pay registration or lottery fees when they start saving.",
+          "The benefit of having children's savings is to help them understand the cooperative society and develop a saving culture.",
+          "The saving amount starts from 500.00 ETB to open an account.",
+          "If children continue saving with the cooperative society and reach 18 years of age, they can become members by purchasing a share in the society without a registration fee, if they meet other criteria.",
+          "Children will receive interest on their savings; however, the saving interest will be added to the saving amount.",
+          "Children's savings serve as collateral for loans for their parents or guardians.",
+          "Children's saving accounts can be opened jointly with parents, allowing them to deposit and withdraw money at any time from a designated account."
+        ]
+      },
+      "womenSaving": {
+        "title": "Women's Saving",
+        "details": [
+          "It has become essential to start a separate saving type to encourage women entrepreneurs.",
+          "The benefit of having women's savings is to help them understand the cooperative society and develop a saving culture.",
+          "The saving amount starts from 1000.00 ETB to open an account.",
+          "Women will receive interest on their savings; however, the saving interest will be added to the saving amount.",
+          "Women's savings serve as collateral for loans."
+        ]
+      }
+    },
+    "interestRates": {
+      "title": "Saving Interest Rates",
+      "list": [
+        "Regular savings pay 7% per annum.",
+        "Demand savings pay 7.5% per annum.",
+        "Time deposit savings pay between 8% and 12% per annum.",
+        "Children's savings pay 8% interest per annum.",
+        "Women's savings pay 7.5% interest per annum.",
+        "Interest on regular and demand savings will be calculated and added to the regular saving account balance rather than being distributed to members at the end of the year; however, interest on time deposit savings will be paid out."
+      ]
+    }
+  },
+  "loans": {
+    "title": "Loans",
+    "intro": "EtCare is a savings and credit cooperative society that offers various loan services to its members. These include consumer loans, business loans, home loans, vehicle purchase loans, special short-term loans, and interest-free loans. To access loans, members must maintain a specific amount in a regular savings account and make a required purchase of shares.",
+    "types": {
+      "title": "EtCare Cooperative Society Loan Types",
+      "consumerLoan": {
+        "title": "Consumer Loan",
+        "categories": [
+          "Loan for education",
+          "Loan for medical expenses",
+          "Loan for household item completion",
+          "Social services (wedding, birthday, graduation…)",
+          "Travel loan for visiting various places"
+        ]
+      },
+      "businessLoan": {
+        "title": "Loan for Business",
+        "categories": [
+          "Loan for urban agriculture",
+          "Loan for small business",
+          "Loan for service business",
+          "Loan for manufacturing business",
+          "Loan for construction business"
+        ]
+      },
+      "housingLoan": {
+        "title": "Loan for Home Purchase, Construction, and Renovation",
+        "categories": [
+          "Residential house",
+          "Commercial house",
+          "Condominium construction completion"
+        ]
+      },
+      "carLoan": {
+        "title": "Loan for Car Purchase",
+        "categories": [
+          "Personal car",
+          "Commercial car (Taxi service car, Public transport car)"
+        ]
+      },
+      "specialShortTermLoan": "Special Short-Term Loan",
+      "leaseFinanceLoan": "Lease Finance Loan",
+      "interestFreeLoanServices": "Interest-Free Loan Services",
+      "salaryLoan": "Salary Loan"
+    },
+    "amountAndRepayment": {
+      "title": "Loan Amount and Repayment Period",
+      "consumerLoan": {
+        "title": "Consumer Loan",
+        "options": [
+          "A member who has continuously saved 15% of the borrowed amount as regular savings and purchased 10% share for 5 months or more will receive a consumer loan with a ceiling of 300,000.00 ETB and a repayment period of up to 30 months.",
+          "A member who has continuously saved 15% of the borrowed amount as regular savings and purchased 10% share for 6 months or more will receive a consumer loan with a ceiling of 400,000.00 ETB and a repayment period of up to 36 months."
+        ]
+      },
+      "businessLoan": {
+        "title": "Business Loan",
+        "options": [
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 10% share for 5 months or more will receive a business loan with a ceiling of 500,000.00 ETB and a repayment period of up to 36 months.",
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 10% share for 6 months or more will receive a business loan with a ceiling of 750,000.00 ETB and a repayment period of up to 48 months.",
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 5% share for 12 months or more will receive a business loan with a ceiling of 1,500,000.00 ETB and a repayment period of up to 60 months."
+        ]
+      },
+      "housingLoan": {
+        "title": "Loan for Home Purchase, Construction, and Renovation",
+        "options": [
+          "To borrow a home loan, a member who has continuously saved 20% of the borrowed amount as regular savings and purchased 10% share for 6 months or more will receive a home loan with a ceiling of 2,000,000.00 ETB and a repayment period of up to 60 months.",
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 10% share for 8 months or more will receive a home loan with a ceiling of 3,000,000.00 ETB and a repayment period of up to 84 months.",
+          "A member who has continuously saved 18% of the borrowed amount as regular savings and purchased 7% share for 12 months or more will receive a home loan with a ceiling of 5,000,000.00 ETB and a repayment period of up to 84 months."
+        ]
+      },
+      "carLoan": {
+        "title": "Car Purchase Loan",
+        "options": [
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 10% share for six months or more will receive a car loan with a ceiling of 2,000,000.00 ETB and a repayment period of up to 48 months.",
+          "A member who has continuously saved 20% of the borrowed amount as regular savings and purchased 5% share for 8 months or more will receive a car loan with a ceiling of up to 3,000,000.00 ETB and a repayment period of up to 60 months."
+        ]
+      },
+      "specialShortTermLoan": {
+        "title": "Special Short-Term Loan",
+        "options": [
+          "Members who have continuously saved 25% of the borrowed amount as regular savings and purchased 5% share for four months or more, and are involved in business, will receive a special short-term loan that is interest-free, by paying only a 10% commission. The loan ceiling is 400,000.00 ETB, and the repayment period is up to four months. Loan repayment will be twice a month, every fifteen days.",
+          "Members who have continuously saved 20% of the borrowed amount as regular savings and purchased 5% share for six months or more, and are involved in business, will receive a special short-term loan that is interest-free, by paying only a 15% commission. The loan ceiling is 600,000.00 ETB, and the repayment period is up to 6 months. Loan repayment will be twice a month, every fifteen days."
+        ]
+      },
+      "salaryLoan": {
+        "title": "Salary Loan",
+        "description": "Government employees, bank employees, insurance employees, and hospital employees who are members can borrow an emergency loan equal to six months of their net salary, after fulfilling 15% pre-saving and 5% share, repayable within one year, by submitting a guarantee letter from their employing institution."
+      }
+    },
+    "eligibility": {
+      "title": "Requirements for EtCare Cooperative Society Loan Service Users",
+      "requirements": [
+        "To apply for and receive loan services, a member must have continuously saved the specified amount for the loan type for at least the time indicated above.",
+        "Able to prepare and present a business plan.",
+        "Able to provide identification (Kebele ID, driving license, government employee ID) and passport.",
+        "Able to provide marriage certificate.",
+        "Able to provide adequate collateral.",
+        "If it is a commercial and investment loan, must be able to provide a business license."
+      ]
+    },
+    "guaranteeTypes": {
+      "title": "Types of Collateral",
+      "savingAndLotteryGuarantee": {
+        "title": "Loan Secured by Saving and Share",
+        "description": "The borrower or the guarantor member can borrow up to 95 percent of their saving and share deposited with the cooperative society, which is owned by a member guarantor."
+      },
+      "letterOfGuaranteeOrSalary": {
+        "title": "Loan Secured by Letter (Salary) Guarantee",
+        "details": [
+          "Loans secured by letter guarantee should not exceed 300,000.00 ETB, and the net salary held as collateral will be 1/3 of the salary multiplied by the loan period.",
+          "The guarantee letter provided must be from a government office and a recognized organization and / or private organization. It must state the guarantor's salary, confirm their permanent employee status, time remaining until retirement, notification if the guarantor leaves the institution, and proof of being a tax-payer; the guarantor's wife/husband must sign."
+        ]
+      },
+      "propertyGuarantee": {
+        "title": "Loan Secured by Property Collateral",
+        "vehicle": {
+          "title": "Loan Secured by Vehicle Collateral",
+          "details": [
+            "Should not exceed 2,500,000.00 ETB. Full insurance must be taken out in the name of the borrower and the cooperative.",
+            "The property/vehicle provided as collateral must have full insurance in the name of the cooperative society and the vehicle owner, be verified as debt and encumbrance-free by the relevant authority, and be seized in the name of the cooperative society.",
+            "The loan granted should not exceed the insured value and purchase price of the vehicle.",
+            "Considering the type of vehicles, it must be based on the current market value estimated by a professional. For this purpose, the cooperative society will have a committee or expert to estimate the market value of the vehicle held as collateral.",
+            "The vehicle held as collateral varies by loan type, but the maximum age from manufacturing (according to the logbook) should not exceed 25 years."
+          ]
+        },
+        "fixedAssetGuarantee": {
+          "title": "Loan Secured by Fixed Asset (Residential House) Mortgage",
+          "details": [
+            "If the borrower has a registered fixed asset (residential/commercial) house in their name, their spouse's name, their representative's name, or their guarantor's name, they can borrow by mortgaging the property, considering its value.",
+            "Loans secured by fixed assets (residential houses) are given considering the borrower's repayment capacity, the loan purpose, and the saving amount, with additional collateral, and should not exceed the loan ceiling."
+          ]
+        }
+      },
+      "bondAndShareGuarantee": {
+        "title": "Regarding Bond and Share Collateral",
+        "details": [
+          "The company where the shares are purchased must be a bank, microfinance, insurance, real estate, hospital, or school.",
+          "The share certificate must include the purchase date, certificate number, number of shares, value per share, and total share value, along with the signature and stamp of the share company authority.",
+          "Proof must be provided that the borrower's shares in the share company are not encumbered by debt and are seized in the name of our cooperative."
+        ]
+      }
+    }
+  },
+  "whySaveWithUs": {
+    "title": "Why Save with Us?",
+    "reasons": [
+      "Competitive Interest Rates: Earn attractive interest on your savings, helping your money grow over time.",
+      "Flexible Saving Options: We offer various saving types including regular, demand, time deposit, children's, and women's savings to suit your needs.",
+      "Secure and Reliable: Rest assured that your funds are safe and secure with our cooperative society.",
+      "Loan Collateral: Your savings can serve as collateral for future loan applications.",
+      "Cooperative Membership Benefits: Be part of a community that fosters mutual growth and financial stability by being a member of our cooperative."
+    ]
+  },
+  "whyLoanWithUs": {
+    "title": "Why Loan with Us?",
+    "reasons": [
+      "Affordable Interest Rates: We offer competitive and reasonable interest rates for consumer, business, housing, and car loans.",
+      "Diverse Loan Types: We have a wide range of loan options to suit your various needs.",
+      "Flexible Repayment Periods: Get extended repayment periods tailored to your financial capacity.",
+      "Simple and Fast Loan Process: Our loan application process is straightforward and efficient.",
+      "Member Support: As a cooperative member, you will always receive full support from us."
+    ]
+  },
+  "equb": {
+    "title": "Equb",
+    "definition": "Equb is a traditional and widely practiced informal savings and credit association in Ethiopia. Members regularly contribute a fixed amount of money, and the total collected sum is given to one member in rotation, providing a lump sum for their financial needs.",
+    "digitalEqub": {
+      "title": "Digital Equb at EtCare SACCO",
+      "description": "This Digital Equb system is designed to modernize the traditional Ethiopian 'Equb' saving practice within the EtCare SACCO framework. It aims to provide a secure, transparent, and convenient platform for members to directly participate in rotating savings and credit associations through their mobile phones or other accessible digital channels.",
+      "mainFunctions": {
+        "title": "Main Functions:",
+        "list": [
+          "Membership Registration and Management: Secure digital registration and management of Equb participants, linked to their EtCare SACCO membership.",
+          "Equb Creation and Joining: Members can create new Equb groups with customized rules (contribution amount, frequency, duration, payout order) or join existing groups.",
+          "Automated Contributions: Integration with mobile money or other digital payment systems to collect contributions directly and on time.",
+          "Transparent Payout Management: A clear and auditable system to manage payout order and distribute funds to the winner of each round.",
+          "Integration with EtCare SACCO Systems (Future Potential): Potential future integration with core EtCare SACCO systems to ensure enhanced member services and financial accessibility.",
+          "Security and Reliability: Robust security measures to protect members' funds and data, ensuring the system's reliability and integrity."
+        ]
+      },
+      "benefitsForMembers": {
+        "title": "Benefits of Digital Equb for EtCare SACCO Members:",
+        "list": [
+          "Improved Efficiency: Automates the Equb process, reducing manual record-keeping and administrative overhead.",
+          "Enhanced Transparency: Provides a clear and auditable record of all transactions and payouts, building trust among members.",
+          "Increased Convenience: Allows members to participate in Equb anytime, anywhere using their digital devices.",
+          "Wider Participation: Makes Equb more accessible to a larger number of EtCare SACCO members.",
+          "Risk Mitigation: Reduces risks associated with cash handling and manual record-keeping.",
+          "Fosters Social Cohesion: Facilitates continued participation in traditional saving practices within a modern framework."
+        ]
+      }
+    }
+  },
+  "whyChooseOurEqub": {
+    "title": "Why Choose Our Equb?",
+    "reasons": [
+      "Transparency and Accountability: All transactions are clear and easily traceable.",
+      "Security and Reliability: We ensure the safety and security of your contributions.",
+      "Flexibility: We offer various Equb options to match your financial capacity and needs.",
+      "Greater Accessibility: Participate conveniently through our digital platforms.",
+      "Community Building: Become part of a supportive community built on mutual trust and financial cooperation."
+    ]
+  },
+  "trainingAndConsulting": {
+    "title1": "Training",
+    "title": "Financial Literacy Training and Consulting Services for EtCare SACCO Members",
+    "tagline": "Strengthen Your Financial Future with EtCare SACCO",
+    "introduction": "At EtCare Saving and Credit Cooperative Society Ltd., we believe that financial literacy is the cornerstone of economic empowerment. Our specialized financial literacy and consulting training services are designed to help individuals, businesses, and organizations build strong financial management skills, make informed investment decisions, and secure their financial future.",
+    "trainingServices": {
+      "title": "Our training services include:",
+      "list": [
+        "Financial Management – Provides skills in budgeting, saving, and proper debt management.",
+        "Investment and Wealth Creation – Provides training on fundamental knowledge of investment and wealth accumulation.",
+        "Business Finance for Entrepreneurs – Provides training on essential financial skills required to run a profitable business.",
+        "SACCO and Linkage Management – Provides understanding of linkage financial systems and best practices.",
+        "Financial Risk Management – Provides training by experienced professionals to help you properly identify and mitigate financial risks."
+      ]
+    },
+    "callToAction": "Take control of your financial future today! Join our training sessions to build the skills you need for financial success."
+  },
+  "whyTrainWithUs": {
+    "title": "Why Train with Us?",
+    "reasons": [
+      "Expert-Led Guidance: Learn from experienced and professional instructors.",
+      "Practical Skills: Gain actionable skills you can apply directly to your daily life and business.",
+      "Comprehensive Content: Our training covers a wide range of financial topics, from budgeting to investment.",
+      "Personalized Advice: Opportunity to receive tailored financial consultation.",
+      "SACCO Membership Benefits: Enhance your financial knowledge and benefit from additional advantages as a cooperative member."
+    ]
+  },
+  "membership": {
+    "title": "Membership",
+    "etcareMembershipForm": {
+      "title": "EtCare Membership Form",
+      "fields": [
+        {
+          "label": "First Name",
+          "name": "firstName",
+          "type": "text"
+        },
+        {
+          "label": "Father Name",
+          "name": "fatherName",
+          "type": "text"
+        },
+        {
+          "label": "Grandfather Name",
+          "name": "grandfatherName",
+          "type": "text"
+        },
+        {
+          "label": "Address",
+          "name": "address",
+          "type": "text"
+        },
+        {
+          "label": "Sex",
+          "name": "sex",
+          "type": "radio",
+          "options": ["Male", "Female", "Other"]
+        },
+        {
+          "label": "Nationality",
+          "name": "nationality",
+          "type": "text"
+        },
+        {
+          "label": "Phone Number",
+          "name": "phoneNumber",
+          "type": "tel"
+        },
+        {
+          "label": "Attach ID",
+          "name": "attachId",
+          "type": "file"
+        },
+        {
+          "label": "Attach Receipt of Bank Deposit:",
+          "name": "attachDepositReceipt",
+          "type": "file"
+        }
+      ],
+      "submitButton": "Submit"
+    },
+    "bankAccounts": {
+      "title": "Bank Accounts",
+      "accounts": [
+        {
+          "bank": "Commercial Bank Of Ethiopia Account 1",
+          "number": "1000628868739",
+          "type": "Regular"
+        },
+        {
+          "bank": "Commercial Bank Of Ethiopia Interest Free Account 2",
+          "number": "1000628867309",
+          "type": "Interest Free"
+        },
+        {
+          "bank": "Dashen Bank (Savings Account) Account 1",
+          "number": "5264357490011",
+          "type": "Savings"
+        },
+        {
+          "bank": "Dashen Bank (Savings Account) Account 2",
+          "number": "0264357490011",
+          "type": "Savings"
+        },
+        {
+          "bank": "Awash Bank (Savings Account) Interest Free Account 1",
+          "number": "014371384732200",
+          "type": "Interest Free Savings"
+        },
+        {
+          "bank": "Awash Bank (Savings Account) Account 2",
+          "number": "013221384732200",
+          "type": "Savings"
+        }
+      ]
+    },
+    "eligibilityCriteria": {
+      "title": "Eligibility Criteria",
+      "list": [
+        "Must be 18 years of age or older.",
+        "Willing to accept the society's bylaws, internal regulations, and guidelines.",
+        "Capable of paying the following:",
+        "Registration fee: 1,500 ETB",
+        "Minimum initial share: 2,000 ETB",
+        "Monthly savings contribution: 750 ETB",
+        "Able to provide identification documents such as a national ID, driver's license, or passport."
+      ]
+    },
+    "becomingAMember": {
+      "title": "Becoming a Member",
+      "steps": [
+        "Complete the membership application online or visit our office to collect a membership booklet.",
+        "Submit any required additional information.",
+        "Your application will be evaluated by our expert membership committee.",
+        "Upon approval, you will officially join EtCare SACCO, receive a membership certificate, and enjoy full access to all our services, products, and benefits."
+      ]
+    },
+    "benefitsOfMembership": {
+      "title": "Benefits of Membership",
+      "list": [
+        "Comprehensive Financial Services: Gain access to diverse financial products, such as savings accounts, loans, and insurance.",
+        "Profit-Sharing Opportunities: Participate in profit-sharing and earn dividends based on EtCare SACCO’s financial regulations.",
+        "Competitive Interest Rates: Enjoy favorable interest rates on both savings and loans.",
+        "Flexible Repayment Options: We understand that everyone’s financial needs are unique, so we offer flexible repayment schedules tailored to your situation.",
+        "Dedicated Support: Receive guidance and assistance from our friendly and professional staff."
+      ]
+    }
+  },
+    "submissionSuccess": {
+      "title": "Submission Successful!",
+      "message": "Thank you for completing the form. Your submission has been received successfully. We’ll get back to you soon.",
+      "backToHome": "Back to Home"
+    }
 }

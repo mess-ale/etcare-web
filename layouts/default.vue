@@ -248,7 +248,7 @@
         <div class="container">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-10 pb-10">
             <div class="space-y-3">
-              <h4 class="mb-4 font-bold font-oswald">CONTACT US</h4>
+              <h4 class="mb-4 font-bold font-oswald">{{ $t("contactUs") }}</h4>
 
               <div class="items-center flex space-x-5">
                 <svg
@@ -267,7 +267,7 @@
                   class="links"
                   target="_blank"
                 >
-                  <h4>head office 22 mazoria ,Golagol</h4>
+                  <h4>{{ $t("address") }}</h4>
                 </a>
               </div>
 
@@ -337,33 +337,33 @@
             </div>
 
             <div>
-              <h4 class="mb-4 font-bold font-oswald">COMPANY</h4>
+              <h4 class="mb-4 font-bold font-oswald">{{ $t("companytitle") }}</h4>
               <ul class="space-y-2">
                 <li>
-                  <nuxt-link to="/about" class="links">About</nuxt-link>
+                  <nuxt-link to="/about" class="links">{{ $t("company[0]") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service" class="links">Service</nuxt-link>
+                  <nuxt-link to="/service" class="links">{{ $t("company[1]") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/blog" class="links">Blog</nuxt-link>
+                  <nuxt-link to="/blog" class="links">{{ $t("company[2]") }}</nuxt-link>
                 </li>
                 <li>
                   <nuxt-link to="/service/saving" class="links"
-                    >Saving</nuxt-link
+                    >{{ $t("company[3]") }}</nuxt-link
                   >
                 </li>
                 <li>
-                  <nuxt-link to="/service/equb" class="links">Equb</nuxt-link>
+                  <nuxt-link to="/service/equb" class="links">{{ $t("company[4]") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service/loan" class="links">Loan</nuxt-link>
+                  <nuxt-link to="/service/loan" class="links">{{ $t("company[5]") }}</nuxt-link>
                 </li>
               </ul>
             </div>
 
             <div class="space-y-3">
-              <h4 class="mb-4 font-bold font-oswald">LATEST NEWS</h4>
+              <h4 class="mb-4 font-bold font-oswald">{{ $t("latestNews") }}</h4>
               <div class="grid grid-cols-1 gap-4">
                 <footerblogco
                   v-for="(blog, index) in blogPostsLetest"
@@ -379,7 +379,7 @@
             </div>
             <div>
               <h5 class="mb-4 md:text-2xl text-center font-Madimi font-bold">
-                Let’s Grow together
+                {{ $t("footerText") }}
               </h5>
               <div class="flex justify-center pt-5">
                 <nuxt-link
@@ -397,7 +397,7 @@
                       d="M17 11v3l-3-3H8a2 2 0 0 1-2-2V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2zm-3 2v2a2 2 0 0 1-2 2H6l-3 3v-3H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h2v3a4 4 0 0 0 4 4z"
                     ></path>
                   </svg>
-                  <h1>contact us</h1>
+                  <h1>{{ $t("footerContact") }}</h1>
                 </nuxt-link>
               </div>
 
@@ -484,7 +484,7 @@
               </div>
               <div>
                 <h4 class="font-bold md:text-end">
-                  © 2024 by EtCare Sacco. All Rights Reserved.
+                  {{ $t("copyright") }}
                 </h4>
               </div>
             </div>
@@ -504,7 +504,7 @@ const isMenuOpen = ref(false);
 const openMenuService = ref(false);
 const isLoading = ref(false);
 const blogPostsLetest = ref([]);
-const langvar = ref("am");
+const langvar = ref("en");
 const { setLocale } = useI18n();
 const chengeenglangvariable = () => {
   langvar.value = "en";

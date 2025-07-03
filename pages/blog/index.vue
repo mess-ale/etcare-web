@@ -3,10 +3,9 @@
         <div class="pt-32 pb-12 space-y-4">
             <div class="body-padding_margin">
                 <div class="container">
-                    <h1 class="text-center text-primary font-oswald text-4xl font-bold">Etcare SACCO BLOG</h1>
+                    <h1 class="text-center text-primary font-oswald text-4xl font-bold">{{ $t("blog.blogtitle") }}</h1>
                     <p class="text-center text-primary font-oswald">
-                        Sharing training insights, the latest L&D trends, and tips to improve your training and
-                        development here.
+                        {{ $t("blog.blogtext") }}
                     </p>
                 </div>
             </div>

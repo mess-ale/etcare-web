@@ -1,7 +1,11 @@
 <template>
   <div class="slideshow-container carousel relative w-full">
-    <div v-for="(slide, index) in slides" :key="index" class="image-sliderfade fade"
-      :style="{ display: currentSlide === index ? 'block' : 'none' }">
+    <div
+      v-for="(slide, index) in slides"
+      :key="index"
+      class="image-sliderfade fade"
+      :style="{ display: currentSlide === index ? 'block' : 'none' }"
+    >
       <img :src="slide.src" style="width: 100%" />
     </div>
 
@@ -12,12 +16,20 @@
     <div class="carousel-body">
       <div class="body-padding_margin">
         <div class="container lg:gap-20 xl:gap-32">
-          <div class="carousel-content flex justify-center items-center text-center gap-6">
+          <div
+            class="carousel-content flex justify-center items-center text-center gap-12"
+          >
             <button @click="prevImage">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.5em" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="m8.165 11.63l6.63-6.43C15.21 4.799 16 5.042 16 5.57v12.86c0 .528-.79.771-1.205.37l-6.63-6.43a.5.5 0 0 1 0-.74">
-                </path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1.5em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m8.165 11.63l6.63-6.43C15.21 4.799 16 5.042 16 5.57v12.86c0 .528-.79.771-1.205.37l-6.63-6.43a.5.5 0 0 1 0-.74"
+                ></path>
               </svg>
             </button>
 
@@ -25,38 +37,63 @@
               <div class="homecontent space-y-6">
                 <div>
                   <h1
-                    class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-4 lg:py-8">
-                    {{ title[currentSlide] }}
+                    class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-4 lg:py-8"
+                  >
+                    {{ $t(`heroText.${title[currentSlide]}`) }}
                   </h1>
                 </div>
 
                 <div class="flex justify-center item-center">
-                  <nuxt-link :to="link[currentSlide]"
-                    class="etcare-button xxxs:text-xs xs:text-sm sm:text-base md:text-lg xxl:text-xl px-6 py-1 md:px-10 xxl:px-14 md:py-1 xxl:py-2 items-center font-oswald">
-                    Read More
+                  <nuxt-link
+                    :to="link[currentSlide]"
+                    class="etcare-button xxxs:text-xs xs:text-sm sm:text-base md:text-lg xxl:text-xl px-6 py-1 md:px-10 xxl:px-14 md:py-1 xxl:py-2 items-center font-oswald"
+                  >
+                    {{ $t("readMore") }}
                   </nuxt-link>
                 </div>
               </div>
             </div>
 
             <button @click="nextImage">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.5em" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M15.835 11.63L9.205 5.2C8.79 4.799 8 5.042 8 5.57v12.86c0 .528.79.771 1.205.37l6.63-6.43a.5.5 0 0 0 0-.74">
-                </path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1.5em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15.835 11.63L9.205 5.2C8.79 4.799 8 5.042 8 5.57v12.86c0 .528.79.771 1.205.37l6.63-6.43a.5.5 0 0 0 0-.74"
+                ></path>
               </svg>
             </button>
           </div>
 
           <div class="home-links flex font-oswald">
-            <nuxt-link class="link-home" :class="{ 'link-home-not': 0 === currentSlide }" to="/service/saving">Saving
-              Service</nuxt-link>
-            <nuxt-link class="link-home" :class="{ 'link-home-not': 1 === currentSlide }" to="/service/loan">Loan
-              Service</nuxt-link>
-            <nuxt-link class="link-home" :class="{ 'link-home-not': 2 === currentSlide }" to="/service/equb">Equb
-              Service</nuxt-link>
-            <nuxt-link class="link-home" :class="{ 'link-home-not': 3 === currentSlide }"
-              to="/service/training">Training Service</nuxt-link>
+            <nuxt-link
+              class="link-home"
+              :class="{ 'link-home-not': 0 === currentSlide }"
+              to="/service/saving"
+              >{{ $t("servicesbottem[0]") }}
+            </nuxt-link>
+            <nuxt-link
+              class="link-home"
+              :class="{ 'link-home-not': 1 === currentSlide }"
+              to="/service/loan"
+              >{{ $t("servicesbottem[1]") }}
+            </nuxt-link>
+            <nuxt-link
+              class="link-home"
+              :class="{ 'link-home-not': 2 === currentSlide }"
+              to="/service/equb"
+              >{{ $t("servicesbottem[2]") }}
+            </nuxt-link>
+            <nuxt-link
+              class="link-home"
+              :class="{ 'link-home-not': 3 === currentSlide }"
+              to="/service/training"
+              >{{ $t("servicesbottem[3]") }}</nuxt-link
+            >
           </div>
         </div>
       </div>
@@ -65,24 +102,31 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import SvgComp from './SvgComp.vue';
+import { ref, onMounted } from "vue";
+import SvgComp from "./SvgComp.vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const slides = ref([
-  { src: '/homepage1.jpeg', caption: 'Image caption 1' },
-  { src: '/homepage2 (2).png', caption: 'Image caption 2' },
-  { src: '/homepage3.png', caption: 'Image caption 3' },
-  { src: '/homepage4.jpeg', caption: 'Image caption 4' },
+  { src: "/homepage1.jpeg", caption: "Image caption 1" },
+  { src: "/homepage2.png", caption: "Image caption 2" },
+  { src: "/homepage3.png", caption: "Image caption 3" },
+  { src: "/homepage4.jpeg", caption: "Image caption 4" },
 ]);
 
 const title = ref([
-  'Secure Your Financial Future with Our Trustworthy Saving Solutions – Building Wealth with Confidence.',
-  'Achieve Your Ambitions with Our Flexible Loan Options – Empowering You to Take the Next Step!',
-  'Join a Community of Collective Savings with Equb – Build Wealth Together for a Brighter Future!',
-  'Empower Your Future with Skill-Building Training Programs Designed to Elevate Your Financial Independence.',
+  0,
+  1,
+  2,
+  3
 ]);
-
-const link = ref(['/service/saving', '/service/loan', '/service/equb', '/service/training']);
+const link = ref([
+  "/service/saving",
+  "/service/loan",
+  "/service/equb",
+  "/service/training",
+]);
 
 const currentSlide = ref(0);
 
@@ -168,11 +212,11 @@ img {
     justify-content: space-between;
     padding-top: 2rem;
     padding-bottom: 3.5rem;
-    color: theme('colors.secondary');
+    color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme('fontSize.xxs');
+    font-size: theme("fontSize.xxs");
     width: 100%;
-    border-top: 0px solid theme('colors.primary');
+    border-top: 0px solid theme("colors.primary");
     transition: border-top 0.5s ease-in-out;
   }
 }
@@ -190,9 +234,9 @@ img {
     justify-content: space-between;
     padding-top: 2.5rem;
     padding-bottom: 3.5rem;
-    color: theme('colors.secondary');
+    color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme('fontSize.xs');
+    font-size: theme("fontSize.xs");
     width: 100%;
   }
 }
@@ -214,12 +258,13 @@ img {
     justify-content: space-between;
     padding-top: 4.5rem;
     padding-bottom: 5.5rem;
-    color: theme('colors.secondary');
+    color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme('fontSize.base');
+    font-size: theme("fontSize.base");
     width: 100%;
     border-top: 0px solid transparent;
-    transition: border-top-color 0.3s ease-in-out, border-top-width 0.3s ease-in-out;
+    transition: border-top-color 0.3s ease-in-out,
+      border-top-width 0.3s ease-in-out;
   }
 }
 
@@ -258,7 +303,7 @@ img {
 
   .carousel button {
     display: block;
-    color: theme('colors.primary');
+    color: theme("colors.primary");
     padding: 0.5rem 0.9rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 6px;
@@ -267,18 +312,17 @@ img {
     cursor: pointer;
   }
 
-
   .carousel button:hover {
-    background: theme('colors.white');
+    background: theme("colors.white");
   }
 
   .home-links {
     justify-content: space-between;
     padding-top: 4.5rem;
     padding-bottom: 5.5rem;
-    color: theme('colors.secondary');
+    color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme('fontSize.lg');
+    font-size: theme("fontSize.lg");
     width: 100%;
     border-top: 0px solid transparent;
     transition: border-top-color 0.3s ease, border-top-width 0.3s ease;
@@ -324,7 +368,7 @@ img {
   }
 
   .carousel button {
-    color: theme('colors.primary');
+    color: theme("colors.primary");
     padding: 0.5rem 0.9rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 6px;
@@ -334,16 +378,16 @@ img {
   }
 
   .carousel button:hover {
-    background: theme('colors.white');
+    background: theme("colors.white");
   }
 
   .home-links {
     justify-content: space-between;
     padding-top: 4.5rem;
     padding-bottom: 5.5rem;
-    color: theme('colors.secondary');
+    color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme('fontSize.xl');
+    font-size: theme("fontSize.xl");
     width: 100%;
     border-top: 0px solid transparent;
     transition: border-top-color 0.3s ease, border-top-width 0.3s ease;
@@ -361,7 +405,7 @@ img {
   height: 4px;
   top: -5px;
   left: 0;
-  background: theme('colors.primary');
+  background: theme("colors.primary");
   transition: all 0.5s ease-in-out;
 }
 
@@ -376,7 +420,7 @@ img {
   height: 4px;
   top: -5px;
   left: 0;
-  background: theme('colors.primary');
+  background: theme("colors.primary");
   transition: all 0.5s ease-in-out;
 }
 

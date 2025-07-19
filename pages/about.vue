@@ -2,10 +2,10 @@
   <div>
     <ServiceCard :text="$t('about.title')" imgservice="/service/about.png" />
 
-    <div class="body-padding_margin">
+    <div class="body-padding_margin xxxs:text-base sm:text-lg">
       <div class="container">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 xxxs:gap-4 md:gap-8 about-border xxxs:p-6 md:p-12"
+          class="grid grid-cols-1 md:grid-cols-2 xxxs:gap-4 md:gap-8 about-border about-padding"
         >
           <div>
             <img
@@ -340,5 +340,9 @@ function prevTeam() {
 .about-image {
   width: 100%;
   height: 100%;
+}
+
+.about-padding {
+  padding: min(1.75rem, 8%) min(3rem, 8%);
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
-    <div v-if="loading" id="preloader">
-        <div id="loop" class="center"></div>
-        <div id="bike-wrapper" class="center">
-            <div id="bike" class="centerBike"></div>
-        </div>
+  <transition name="fade">
+    <div v-if="loading" class="preloader">
+      <div class="inner">
+        <img src="/public/icon-logo.png" alt="Company Logo" class="logo" />
+        <div class="spinner"></div>
+      </div>
     </div>
+  </transition>
 </template>
 
 <script>
@@ -40,91 +42,67 @@ export default {
 </script>
 
 <style scoped>
-#preloader {
-    background-color: #214080;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9999;
-    overflow: hidden;
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  height: 100dvh;
+  background: #EEF4FF;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scaleIn 0.6s ease-out;
 }
 
-.centerBike {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 26px;
-    margin-left: -12px;
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
 }
 
-#loop {
-    height: 100px;
-    width: 100px;
-    border: theme('colors.secondary') solid 4px;
-    /* Replace with your theme secondary color if needed */
-    border-radius: 200px;
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #214080;
+  border-top: 5px solid #D92A27;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-#loop::before {
-    background: linear-gradient(to left,
-            rgba(187, 95, 39, 0) 0%,
-            theme('colors.secondary') 30%,
-            /* Replace with theme secondary color */
-            theme('colors.secondary') 70%,
-            rgba(187, 95, 39, 0) 100%);
-    content: "";
-    display: block;
-    height: 4px;
-    left: -100px;
-    position: relative;
-    top: 95px;
-    width: 300px;
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-#bike-wrapper {
-    height: 108px;
-    width: 108px;
-    animation: drive 3s linear infinite;
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-#bike {
-    height: 24px;
-    width: 25px;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/motorbike.png");
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease;
 }
-
-@keyframes drive {
-    0% {
-        margin-left: -364px;
-        opacity: 0;
-    }
-
-    33.33% {
-        transform: rotate(0deg);
-        margin-left: -50px;
-        opacity: 1;
-    }
-
-    66.66% {
-        transform: rotate(-360deg);
-        margin-left: -50px;
-        opacity: 1;
-    }
-
-    100% {
-        margin-left: 264px;
-        transform: rotate(-360deg);
-        opacity: 0;
-    }
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>

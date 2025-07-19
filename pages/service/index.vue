@@ -26,7 +26,7 @@
                             <img src="/service/saving.png" alt="Description" class="service-image" />
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright1 }" class="offscreenright" ref="myElementright1">
-                            <div class="space-y-4 p-4">
+                            <div class="space-y-4 xs:p-4">
                                 <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.saving.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft2 }" class="offscreenleft" ref="myElementleft2">
-                            <div class="space-y-4 p-4">
+                            <div class="space-y-4 xs:p-4">
                                 <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.training.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
@@ -68,13 +68,13 @@
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright2 }" class=" offscreenright"
                             ref="myElementright2">
-                            <img src="/service/training.jpg" class="service-image" alt="saving" />
+                            <img src="/service/training.JPG" class="service-image" alt="saving" />
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft3 }" class=" offscreenleft" ref="myElementleft3">
                             <img src="/service/equb.png" alt="saving" class="service-image" />
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright3 }" class="offscreenright" ref="myElementright3">
-                            <div class="space-y-4 p-4">
+                            <div class="space-y-4 xs:p-4">
                                 <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.equb.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft4 }" class="offscreenleft" ref="myElementleft4">
-                            <div class="space-y-4 p-4">
+                            <div class="space-y-4 xs:p-4">
                                 <h1 class="text-secondary font-oswald xxxs:text-3xl md:text-4xl font-bold">{{ $t("servicespage.loan.title") }}</h1>
                                 <p
                                     class="text-primary font-roboto text-xl text-justify xxxs:text-base sm:text-lg lg:text-xl">
@@ -110,7 +110,7 @@
                                                 d="m7.45 17.45l-1.4-1.4L9.075 13H2v-2h7.075L6.05 7.95l1.4-1.4L12.9 12zM13 17v-2h9v2zm0-8V7h9v2zm3 4v-2h6v2z">
                                             </path>
                                         </svg>
-                                        <span>{{ $t("servicespage.loan.button") }}</span>
+                                        <span>{{ $t("servicespage.equb.button") }}</span>
                                     </nuxt-link>
                                 </div>
                             </div>
@@ -125,6 +125,7 @@
         </div>
     </div>
 </template>
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 

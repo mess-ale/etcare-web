@@ -40,22 +40,22 @@
       <div class="body-padding_margin">
         <div class="container">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="value-boje-section p-6 shadow-md space-y-4">
+            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
               <div class="flex items-bottoms">
                 <img src="/vision.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">1</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.one") }}</h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("visionTitle") }}</h3>
               <p>{{ $t("visionText") }}</p>
             </div>
 
-            <div class="value-boje-section p-6 shadow-md space-y-4">
+            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
               <div class="flex items-bottoms">
                 <img src="/Mission.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">2</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.two") }}</h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("missionTitle") }}</h3>
@@ -64,11 +64,11 @@
               </p>
             </div>
 
-            <div class="value-boje-section p-6 shadow-md space-y-4">
+            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
               <div class="flex items-bottoms">
                 <img src="/object.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">3</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.three") }}</h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("valueTitle") }}</h3>
@@ -104,7 +104,7 @@
 
           <div class="flex justify-center pb-20">
             <p
-              class="p-blog text-primary text-center font-oswald xxxs:text-xl xs:text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold"
+              class="p-blog text-primary text-center font-oswald font-bold"
             >
               {{ $t("blogSubHeader") }}
             </p>
@@ -116,6 +116,7 @@
               :key="index"
               :blog_id="blog.blog_id"
               :title="blog.title"
+              :link="blog.link"
               :image="blog.blog_image"
               :content="blog.content"
               author="EtCare"
@@ -168,7 +169,8 @@ onMounted(() => {
 }
 
 .p-blog {
-  width: 60%;
+  /* padding: min(5em, 8%); */
+    font-size: clamp(1rem, calc(4vw + 1rem), 2.25rem);
 }
 
 .value-boje-section {
@@ -177,7 +179,7 @@ onMounted(() => {
   color: theme("colors.secondary");
   font-family: oswald, sans-serif;
   text-align: center;
-  padding: 1.5rem 2.5rem;
+  padding: min(1.5rem, 8%) min(2.5rem, 8%);
   justify-content: center;
   border-radius: 8px;
   overflow: hidden;

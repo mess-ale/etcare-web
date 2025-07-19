@@ -6,14 +6,12 @@
         <img src="/PngItem_3416354.png" alt="success image" />
       </div>
       <!-- Success Message -->
-      <h1 class="text-2xl font-bold text-primary mb-4">Submission Successful!</h1>
-      <p class="text-primary mb-12">
-        Thank you for completing the form. Your submission has been received successfully. We’ll get back to you soon.
-      </p>
+      <h1 class="text-2xl font-bold text-primary mb-4">{{ $t("submissionSuccess.title") }}</h1>
+      <p class="text-primary mb-12">{{ $t("submissionSuccess.message") }}</p>
 
       <!-- Back Button -->
       <nuxt-link to="/" class="etcare-button p xxxs:px-4 xxxs:py-2 md:px-10 md:py-2 xxxs:text-xs md:text-base">
-        Back to Home
+        {{ $t("submissionSuccess.backToHome") }}
       </nuxt-link>
     </div>
   </div>

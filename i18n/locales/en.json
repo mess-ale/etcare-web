@@ -35,6 +35,8 @@
   "footerText": "Let’s Grow together",
   "footerContact": "contact us",
   "copyright": "© 2024 by EtCare Sacco. All Rights Reserved.",
+  "WebsiteBy": "Website By:",
+  "Name": "Meseret Alemnew",
   "contact": {
     "title": "Contact Us",
     "addressLabel": "ADDRESS",
@@ -419,8 +421,8 @@
           "type": "text"
         },
         {
-          "label": "Sex",
-          "name": "sex",
+          "label": "Gender",
+          "name": "Gender",
           "type": "radio",
           "options": ["Male", "Female", "Other"]
         },
@@ -435,8 +437,13 @@
           "type": "tel"
         },
         {
-          "label": "Attach ID",
-          "name": "attachId",
+          "label": "Upload Front of ID",
+          "name": "attachFrontId",
+          "type": "file"
+        },
+        {
+          "label": "Upload Back of ID (Optional)",
+          "name": "attachBackId",
           "type": "file"
         },
         {
@@ -479,6 +486,11 @@
           "bank": "Awash Bank (Savings Account) Account 2",
           "number": "013221384732200",
           "type": "Savings"
+        },
+        {
+          "bank": "Oromia Bank (Savings Account) Saving",
+          "number": "1054500134786",
+          "type": "Savings"
         }
       ]
     },
@@ -514,9 +526,19 @@
       ]
     }
   },
-    "submissionSuccess": {
-      "title": "Submission Successful!",
-      "message": "Thank you for completing the form. Your submission has been received successfully. We’ll get back to you soon.",
-      "backToHome": "Back to Home"
-    }
+  "submissionSuccess": {
+    "title": "Submission Successful!",
+    "message": "Thank you for completing the form. Your submission has been received successfully. We’ll get back to you soon.",
+    "backToHome": "Back to Home"
+  },
+  "maritalStatus": {
+    "title": "Marital Status",
+    "single": "Single",
+    "married": "Married"
+  },
+  "number": {
+    "one": "1",
+    "two": "2",
+    "three": "3"
+  }
 }

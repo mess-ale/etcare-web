@@ -3,7 +3,7 @@
         <div class="pt-32 pb-12 space-y-4">
             <div class="body-padding_margin">
                 <div class="container">
-                    <h1 class="text-center text-primary font-oswald text-4xl font-bold">{{ $t("blog.blogtitle") }}</h1>
+                    <h1 class="blog_title_font">{{ $t("blog.blogtitle") }}</h1>
                     <p class="text-center text-primary font-oswald">
                         {{ $t("blog.blogtext") }}
                     </p>
@@ -19,7 +19,7 @@
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <blog-component v-for="(blog, index) in blogPosts" :key="index" :blog_id="blog.blog_id"
-                        :title="blog.title" :image="blog.blog_image" :content="blog.content" author="EtCare"
+                        :title="blog.title" :link="blog.link" :image="blog.blog_image" :content="blog.content" author="EtCare"
                         :publishedAt="blog.event_date" />
                 </div>
             </div>
@@ -80,3 +80,14 @@ onMounted(() => {
     fetchBlogs();
 });
 </script>
+
+<style>
+.blog_title_font {
+    font-size: clamp(1rem, calc(4vw + 1rem), 2.25rem);
+    color: theme("colors.primary");
+    text-align: center;
+    font-family: "oswald";
+    font-weight: bold;
+}
+
+</style>

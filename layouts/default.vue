@@ -27,7 +27,9 @@
               >
                 <nuxt-link to="/" class="links">{{ $t("menu[0]") }}</nuxt-link>
                 <div class="flex items-center dropdown-link">
-                  <nuxt-link to="/service" class="links">{{ $t("menu[1]") }}</nuxt-link>
+                  <nuxt-link to="/service" class="links">{{
+                    $t("menu[1]")
+                  }}</nuxt-link>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -39,198 +41,237 @@
                   </svg>
                   <ul class="dropdown font-bold font-Roboto">
                     <nuxt-link to="/service/saving">
-                      <li>{{ $t('services[0]') }}</li>
+                      <li>{{ $t("services[0]") }}</li>
                     </nuxt-link>
                     <nuxt-link to="/service/equb">
-                      <li>{{ $t('services[1]') }}</li>
+                      <li>{{ $t("services[1]") }}</li>
                     </nuxt-link>
                     <nuxt-link to="/service/loan">
-                      <li>{{ $t('services[2]') }}</li>
+                      <li>{{ $t("services[2]") }}</li>
                     </nuxt-link>
                     <nuxt-link to="/service/training">
-                      <li>{{ $t('services[3]') }}</li>
+                      <li>{{ $t("services[3]") }}</li>
                     </nuxt-link>
                   </ul>
                 </div>
-                <nuxt-link to="/about" class="links">{{ $t("menu[2]") }}</nuxt-link>
-                <nuxt-link to="/blog" class="links">{{ $t("menu[3]") }}</nuxt-link>
-                <nuxt-link to="/contact" class="links">{{ $t("menu[4]") }}</nuxt-link>
+                <nuxt-link to="/about" class="links">{{
+                  $t("menu[2]")
+                }}</nuxt-link>
+                <nuxt-link to="/blog" class="links">{{
+                  $t("menu[3]")
+                }}</nuxt-link>
+                <nuxt-link to="/contact" class="links">{{
+                  $t("menu[4]")
+                }}</nuxt-link>
               </div>
             </div>
           </div>
 
-          <div class="w-2/4 lg:hidden flex justify-center items-center">
-            <button @click="toggleMenu" aria-label="Toggle Menu">
-              <svg
-                v-if="!isMenuOpen"
-                xmlns="http://www.w3.org/2000/svg"
-                width="2em"
-                height="2em"
-                viewBox="0 0 24 24"
+          <!-- Slide-In Mobile Menu -->
+          <transition name="slide">
+            <div
+              v-if="isMenuOpen"
+              class="fixed inset-0 bg-primary text-white z-10 flex justify-center items-center flex-col items-start p-6 space-y-4 lg:hidden"
+            >
+              <button
+                @click="toggleMenu"
+                class="absolute top-6 z-100 right-8 self-end text-white text-3xl pr-6"
               >
-                <path
-                  fill="currentColor"
-                  d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
-                ></path>
-              </svg>
+                &times;
+              </button>
+              <ul class="space-y-4 items-center py-2 font-bold text-center">
+                <li class="">
+                  <nuxt-link to="/" @click="closeMenu">{{
+                    $t("menu[0]")
+                  }}</nuxt-link>
+                </li>
+                <li class="flex justify-center items-center">
+                  <nuxt-link to="/service" @click="closeMenu">{{
+                    $t("menu[1]")
+                  }}</nuxt-link>
+                  <svg
+                    @click="toggleMenuservice"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    class="ml-1"
+                  >
+                    <path fill="currentColor" d="m5 8l7 8l7-8z"></path>
+                  </svg>
+                </li>
 
-              <svg
-                v-if="isMenuOpen"
-                xmlns="http://www.w3.org/2000/svg"
-                width="2em"
-                height="2em"
-                class="font-bold"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="m5 19l7-7m0 0l7-7m-7 7L5 5m7 7l7 7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-
-          <div
-            v-if="isMenuOpen"
-            class="absolute top-16 z-100 left-0 w-full bg-gray-100 lg:hidden shadow-lg z-10"
-          >
-            <ul class="space-y-4 items-center py-2 font-bold text-center">
-              <li class="border-b-2">
-                <nuxt-link to="/" @click="closeMenu">{{ $t("menu[0]") }}</nuxt-link>
-              </li>
-              <li class="border-b-2 flex justify-center items-center">
-                <nuxt-link to="/service" @click="closeMenu">{{ $t("menu[1]") }}</nuxt-link>
-                <svg
-                  @click="toggleMenuservice"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  class="ml-1"
-                >
-                  <path fill="currentColor" d="m5 8l7 8l7-8z"></path>
-                </svg>
                 <div
                   v-if="openMenuService"
-                  class="absolute top-16 z-100 left-0 w-full bg-gray-300 lg:hidden shadow-lg z-10"
+                  class="w-full lg:hidden shadow-lg z-10"
                 >
                   <ul class="space-y-4 py-2 font-bold text-center">
-                    <li @click="closeMenuservice" class="border-b-2">
-                      <nuxt-link to="/service/saving"> {{ $t('services[0]') }} </nuxt-link>
+                    <li @click="closeMenuservice" class="">
+                      <nuxt-link to="/service/saving">
+                        {{ $t("services[0]") }}
+                      </nuxt-link>
                     </li>
-                    <li @click="closeMenuservice" class="border-b-2">
-                      <nuxt-link to="/service/equb"> {{ $t('services[1]') }} </nuxt-link>
+                    <li @click="closeMenuservice" class="">
+                      <nuxt-link to="/service/equb">
+                        {{ $t("services[1]") }}
+                      </nuxt-link>
                     </li>
-                    <li @click="closeMenuservice" class="border-b-2">
-                      <nuxt-link to="/service/loan"> {{ $t('services[2]') }} </nuxt-link>
+                    <li @click="closeMenuservice" class="">
+                      <nuxt-link to="/service/loan">
+                        {{ $t("services[2]") }}
+                      </nuxt-link>
                     </li>
                     <li @click="closeMenuservice">
-                      <nuxt-link to="/service/training"> {{ $t('services[3]') }} </nuxt-link>
+                      <nuxt-link to="/service/training">
+                        {{ $t("services[3]") }}
+                      </nuxt-link>
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li class="border-b-2">
-                <nuxt-link to="/about" @click="closeMenu">{{ $t("menu[2]") }}</nuxt-link>
-              </li>
-              <li class="border-b-2">
-                <nuxt-link to="/blog" @click="closeMenu">{{ $t("menu[3]") }}</nuxt-link>
-              </li>
-              <li class="border-b-2">
-                <nuxt-link to="/contact" @click="closeMenu">{{ $t("menu[4]") }}</nuxt-link>
-              </li>
-            </ul>
-          </div>
+                <li class="">
+                  <nuxt-link to="/about" @click="closeMenu">{{
+                    $t("menu[2]")
+                  }}</nuxt-link>
+                </li>
+                <li class="">
+                  <nuxt-link to="/blog" @click="closeMenu">{{
+                    $t("menu[3]")
+                  }}</nuxt-link>
+                </li>
+                <li class="">
+                  <nuxt-link to="/contact" @click="closeMenu">{{
+                    $t("menu[4]")
+                  }}</nuxt-link>
+                </li>
+              </ul>
+            </div>
+          </transition>
 
-          <div class="w-1/4 flex space-x-4 justify-end">
-            <nuxt-link
-              to="/MembershipForm"
-              class="xxxs:text-xs md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10"
-            >
-              {{ $t("menu[5]") }}
-            </nuxt-link>
-
-            <div class="class_flag flex gap-2">
-              <!-- English Flag Button -->
-              <button
-                @click="chengeenglangvariable"
-                :class="{
-                  'border-2 border-blue-500 rounded': langvar === 'en',
-                }"
-                class="p-1 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md"
-                aria-label="Switch to English"
+          <div
+            class="xxxs:w-3/4 md:w-1/4 flex xxxs:space-x-2 md:space-x-4 justify-end"
+          >
+            <div class="flex items-center justify-center">
+              <nuxt-link
+                to="/MembershipForm"
+                class="xxxs:text-xs truncate md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1.7em"
-                  height="1.2em"
-                  viewBox="0 0 640 480"
+                {{ $t("menu[5]") }}
+              </nuxt-link>
+            </div>
+
+            <div>
+              <div class="class_flag flex gap-2">
+                <!-- English Flag Button -->
+                <button
+                  @click="chengeenglangvariable"
+                  :class="{
+                    'border-2 border-blue-500 rounded': langvar === 'en',
+                  }"
+                  class="p-1 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md"
+                  aria-label="Switch to English"
                 >
-                  <!-- Icon from Flag Icons by Panayiotis Lipiridis - https://github.com/lipis/flag-icons/blob/main/LICENSE -->
-                  <path fill="#bd3d44" d="M0 0h640v480H0" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.7em"
+                    height="1.2em"
+                    viewBox="0 0 640 480"
+                  >
+                    <!-- Icon from Flag Icons by Panayiotis Lipiridis - https://github.com/lipis/flag-icons/blob/main/LICENSE -->
+                    <path fill="#bd3d44" d="M0 0h640v480H0" />
+                    <path
+                      stroke="#fff"
+                      stroke-width="37"
+                      d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"
+                    />
+                    <path fill="#192f5d" d="M0 0h364.8v258.5H0" />
+                    <marker id="flagUs4x30" markerHeight="30" markerWidth="30">
+                      <path fill="#fff" d="m14 0l9 27L0 10h28L5 27z" />
+                    </marker>
+                    <path
+                      fill="none"
+                      markerMid="url(#flagUs4x30)"
+                      d="m0 0l16 11h61h61h61h61h60L47 37h61h61h60h61L16 63h61h61h61h61h60L47 89h61h61h60h61L16 115h61h61h61h61h60L47 141h61h61h60h61L16 166h61h61h61h61h60L47 192h61h61h60h61L16 218h61h61h61h61h60z"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  @click="chengeamhlangvariable"
+                  :class="{
+                    'border-2 border-blue-500 rounded': langvar === 'am',
+                  }"
+                  class="p-1 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md"
+                  aria-label="Switch to Amharic"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.7em"
+                    height="1.2em"
+                    viewBox="0 0 640 480"
+                  >
+                    <!-- Icon from Flag Icons by Panayiotis Lipiridis - https://github.com/lipis/flag-icons/blob/main/LICENSE -->
+                    <defs>
+                      <clipPath id="flagEt4x30">
+                        <path fillOpacity=".7" d="M-61.3 0h682.7v512H-61.3z" />
+                      </clipPath>
+                    </defs>
+                    <g
+                      fillRule="evenodd"
+                      stroke-width="1pt"
+                      clipPath="url(#flagEt4x30)"
+                      transform="translate(57.5)scale(.94)"
+                    >
+                      <path fill="#ffc621" d="M-238 3.5H800v498H-238z" />
+                      <path fill="#ef2118" d="M-240 342.5H799.3V512H-240z" />
+                      <path fill="#298c08" d="M-238 0H800v180H-238z" />
+                      <circle
+                        cx="534.2"
+                        cy="353"
+                        r="199.7"
+                        fill="#006bc6"
+                        transform="matrix(.54 0 0 .54 -25.8 74)"
+                      />
+                      <path
+                        fill="#ffc621"
+                        d="m214.3 188.2l-6.5 4.5l23.5 33l6.3-4zm29.4 78l-9.7-6.8l4-12.7l-48.1.7l-14-10.7l65.7-.7l12.2-36.9l6.6 15zm76.5-70.7l-6.3-4.8l-24.3 32.4l5.6 4.7zM254.8 247l3.5-11.2h13.3L256.4 190l6-16.5l20.5 62.4l38.8.5l-12.2 10.7zm90.6 51.2l2.7-7.4l-38.3-13.3l-2.8 7zm-69.1-46.4l11.7-.1l4.1 12.6l38.8-28.5l17.6.6l-53.1 38.7l11.5 37.2l-14-8.4zm-19.8 102l7.9.2l.3-40.5l-7.4-.5zm22-80.3l3.8 11.1l-10.7 8l39.4 27.7l5 16.8l-53.6-38l-31.5 22.7l3.5-16l44-32.3zm-103.3 13l2.3 7.5l38.7-12.2l-2-7.2zm83.2-4l-9.4 7.1l-10.8-7.7l-14.2 46l-14.4 10l19.5-62.7l-31.4-23l16.3-1.6z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:hidden flex justify-center items-center">
+              <button @click="toggleMenu" aria-label="Toggle Menu">
+                <svg
+                  v-if="!isMenuOpen"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    stroke="#fff"
-                    stroke-width="37"
-                    d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"
-                  />
-                  <path fill="#192f5d" d="M0 0h364.8v258.5H0" />
-                  <marker id="flagUs4x30" markerHeight="30" markerWidth="30">
-                    <path fill="#fff" d="m14 0l9 27L0 10h28L5 27z" />
-                  </marker>
+                    fill="currentColor"
+                    d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
+                  ></path>
+                </svg>
+
+                <svg
+                  v-if="isMenuOpen"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  class="font-bold"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="none"
-                    markerMid="url(#flagUs4x30)"
-                    d="m0 0l16 11h61h61h61h61h60L47 37h61h61h60h61L16 63h61h61h61h61h60L47 89h61h61h60h61L16 115h61h61h61h61h60L47 141h61h61h60h61L16 166h61h61h61h61h60L47 192h61h61h60h61L16 218h61h61h61h61h60z"
-                  />
-                </svg>
-              </button>
-
-              <!-- Amharic Flag Button (Ethiopian Flag) -->
-              <button
-                @click="chengeamhlangvariable"
-                :class="{
-                  'border-2 border-blue-500 rounded': langvar === 'am',
-                }"
-                class="p-1 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md"
-                aria-label="Switch to Amharic"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1.7em"
-                  height="1.2em"
-                  viewBox="0 0 640 480"
-                >
-                  <!-- Icon from Flag Icons by Panayiotis Lipiridis - https://github.com/lipis/flag-icons/blob/main/LICENSE -->
-                  <defs>
-                    <clipPath id="flagEt4x30">
-                      <path fillOpacity=".7" d="M-61.3 0h682.7v512H-61.3z" />
-                    </clipPath>
-                  </defs>
-                  <g
-                    fillRule="evenodd"
-                    stroke-width="1pt"
-                    clipPath="url(#flagEt4x30)"
-                    transform="translate(57.5)scale(.94)"
-                  >
-                    <path fill="#ffc621" d="M-238 3.5H800v498H-238z" />
-                    <path fill="#ef2118" d="M-240 342.5H799.3V512H-240z" />
-                    <path fill="#298c08" d="M-238 0H800v180H-238z" />
-                    <circle
-                      cx="534.2"
-                      cy="353"
-                      r="199.7"
-                      fill="#006bc6"
-                      transform="matrix(.54 0 0 .54 -25.8 74)"
-                    />
-                    <path
-                      fill="#ffc621"
-                      d="m214.3 188.2l-6.5 4.5l23.5 33l6.3-4zm29.4 78l-9.7-6.8l4-12.7l-48.1.7l-14-10.7l65.7-.7l12.2-36.9l6.6 15zm76.5-70.7l-6.3-4.8l-24.3 32.4l5.6 4.7zM254.8 247l3.5-11.2h13.3L256.4 190l6-16.5l20.5 62.4l38.8.5l-12.2 10.7zm90.6 51.2l2.7-7.4l-38.3-13.3l-2.8 7zm-69.1-46.4l11.7-.1l4.1 12.6l38.8-28.5l17.6.6l-53.1 38.7l11.5 37.2l-14-8.4zm-19.8 102l7.9.2l.3-40.5l-7.4-.5zm22-80.3l3.8 11.1l-10.7 8l39.4 27.7l5 16.8l-53.6-38l-31.5 22.7l3.5-16l44-32.3zm-103.3 13l2.3 7.5l38.7-12.2l-2-7.2zm83.2-4l-9.4 7.1l-10.8-7.7l-14.2 46l-14.4 10l19.5-62.7l-31.4-23l16.3-1.6z"
-                    />
-                  </g>
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m5 19l7-7m0 0l7-7m-7 7L5 5m7 7l7 7"
+                  ></path>
                 </svg>
               </button>
             </div>
@@ -312,7 +353,7 @@
                     </path>
                   </g>
                 </svg>
-                <a href="mailto:Etcare@gmail.com" class="links">
+                <a href="mailto:saccoetcare051@gmail.com" class="links">
                   <h4>saccosetcare@gmail.com</h4>
                 </a>
               </div>
@@ -330,34 +371,46 @@
                   ></path>
                 </svg>
 
-                <a href="tel:+251964540000" class="links">
-                  <h4>+251-96-454-0000</h4>
+                <a href="tel:+251-11-666-2529" class="links">
+                  <h4>+251-11-666-2529</h4>
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 class="mb-4 font-bold font-oswald">{{ $t("companytitle") }}</h4>
+              <h4 class="mb-4 font-bold font-oswald">
+                {{ $t("companytitle") }}
+              </h4>
               <ul class="space-y-2">
                 <li>
-                  <nuxt-link to="/about" class="links">{{ $t("company[0]") }}</nuxt-link>
+                  <nuxt-link to="/about" class="links">{{
+                    $t("company[0]")
+                  }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service" class="links">{{ $t("company[1]") }}</nuxt-link>
+                  <nuxt-link to="/service" class="links">{{
+                    $t("company[1]")
+                  }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/blog" class="links">{{ $t("company[2]") }}</nuxt-link>
+                  <nuxt-link to="/blog" class="links">{{
+                    $t("company[2]")
+                  }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service/saving" class="links"
-                    >{{ $t("company[3]") }}</nuxt-link
-                  >
+                  <nuxt-link to="/service/saving" class="links">{{
+                    $t("company[3]")
+                  }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service/equb" class="links">{{ $t("company[4]") }}</nuxt-link>
+                  <nuxt-link to="/service/equb" class="links">{{
+                    $t("company[4]")
+                  }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/service/loan" class="links">{{ $t("company[5]") }}</nuxt-link>
+                  <nuxt-link to="/service/loan" class="links">{{
+                    $t("company[5]")
+                  }}</nuxt-link>
                 </li>
               </ul>
             </div>
@@ -370,6 +423,7 @@
                   :key="index"
                   :blog_id="blog.blog_id"
                   :description="blog.title"
+                  :link="blog.link"
                   :imageSrc="blog.blog_image"
                   :content="blog.content"
                   author="EtCare"
@@ -482,10 +536,16 @@
                   <img src="/Etcare_logo1-removebg.png" alt="etcare logo" />
                 </nuxt-link>
               </div>
-              <div>
-                <h4 class="font-bold md:text-end">
+              <div class="md:text-end">
+                <h4 class="font-bold">
                   {{ $t("copyright") }}
                 </h4>
+                <div class="flex gap-2 font-robot md:justify-end">
+                  <h1>{{ $t("WebsiteBy") }}</h1>
+                  <a href="mailto:alemnehmeseret@gmail.com" class="links">
+                    <h4 class="text-secondary">{{ $t("Name") }}</h4>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -549,7 +609,6 @@ const closeMenuservice = () => {
 onMounted(async () => {
   window.addEventListener("scroll", handleScroll);
   fetchBlogs();
-  
 });
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
@@ -713,5 +772,26 @@ onBeforeUnmount(() => {
 
 .dropdown li:hover::before {
   width: 100%;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
 }
 </style>

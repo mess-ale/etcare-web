@@ -2,7 +2,7 @@
   <nuxt-link :to="`/blog/${blog_id}`" class="foter-button">
     <div class="flex items-center max-w-xs foter-class">
       <img :src="`https://django.etcaresacco.com${imageSrc}`" alt="Image"
-        class=" w-20 h-20 pr-3 object-cover" />
+        class="footerbloge-compo pr-3" />
       <div>
         <p class="text-sm">{{ description }}</p>
         <p class="text-sm font-bold mt-1">{{ date }}</p>
@@ -39,5 +39,11 @@ export default {
 .foter-class:not(:hover) {
   transform: scale(1.0);
   text-shadow: none;
+}
+
+.footerbloge-compo {
+  width: 5.75rem;
+  height: 5rem;
+  border-radius: 0.25rem;  
 }
 </style>

@@ -10,46 +10,46 @@
           <div>
             <div class="saving-right-box p-4">
               <h1
-                class="text-secondary font-oswald text-2xl text-center font-bold p-4"
+                class="text-secondary font-oswald text-2xl text-center font-bold loan-title-padding"
               >
                 {{ $t("whyTrainWithUs.title") }}
               </h1>
               <div class="space-y-2">
-                <div class="gap-4 p-4 border-b border-gray-200">
-                  <div class="flex items-center text-primary space-x-10">
+                <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding p-4 border-b border-gray-200">
+                  <div class="flex items-center text-primary xxxs:space-x-2 sm:space-x-10">
                     <img src="/right.png" class="right-icon" />
 
-                    <h2 class="text-lg flex items-center">
+                    <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                       {{ $t("whyTrainWithUs.reasons[0]") }}
                     </h2>
                   </div>
                 </div>
 
-                <div class="gap-4 p-4 border-b border-gray-200">
-                  <div class="flex items-center text-primary space-x-10">
+                <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding p-4 border-b border-gray-200">
+                  <div class="flex items-center text-primary xxxs:space-x-2 sm:space-x-10">
                     <img src="/right.png" class="right-icon" />
 
-                    <h2 class="text-lg flex items-center">
+                    <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                       {{ $t("whyTrainWithUs.reasons[1]") }}
                     </h2>
                   </div>
                 </div>
 
-                <div class="gap-4 p-4 border-b border-gray-200">
-                  <div class="flex items-center text-primary space-x-10">
+                <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding p-4 border-b border-gray-200">
+                  <div class="flex items-center text-primary xxxs:space-x-2 sm:space-x-10">
                     <img src="/right.png" class="right-icon" />
 
-                    <h2 class="text-lg flex items-center">
+                    <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                       {{ $t("whyTrainWithUs.reasons[2]") }}
                     </h2>
                   </div>
                 </div>
 
-                <div class="gap-4 p-4 border-b border-gray-200">
-                  <div class="flex items-center text-primary space-x-10">
+                <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding p-4 border-b border-gray-200">
+                  <div class="flex items-center text-primary xxxs:space-x-2 sm:space-x-10">
                     <img src="/right.png" class="right-icon" />
 
-                    <h2 class="text-lg flex items-center">
+                    <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                       {{ $t("whyTrainWithUs.reasons[3]") }}
                     </h2>
                   </div>
@@ -58,7 +58,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="xxxs:text-base sm:text-lg">
             <h1 class="saving-title text-center">
               {{ $t("trainingAndConsulting.title1") }}
             </h1>

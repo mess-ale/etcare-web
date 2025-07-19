@@ -8,46 +8,47 @@
             <div>
               <div class="saving-right-box p-4">
                 <h1
-                  class="text-secondary font-oswald text-2xl text-center font-bold p-4"
+                  class="text-secondary font-oswald text-2xl text-center font-bold loan-title-padding"
                 >
                   {{ $t("whyLoanWithUs.title") }}
                 </h1>
-                <div class="space-y-2">
-                  <div class="gap-4 p-4 border-b border-gray-200">
-                    <div class="flex items-center text-primary space-x-10">
+
+                <div class="xxxs:space-y-1 md:space-y-2">
+                  <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding border-b border-gray-200">
+                    <div class="flex items-center text-primary xxxs:space-x-2 sm:space-x-10">
                       <img src="/right.png" class="right-icon" />
 
-                      <h2 class="text-lg flex items-center">
+                      <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                         {{ $t("whySaveWithUs.reasons[0]") }}
                       </h2>
                     </div>
                   </div>
                   
-                  <div class="gap-4 p-4 border-b border-gray-200">
-                    <div class="flex items-center text-primary space-x-10">
+                  <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding  border-b border-gray-200">
+                    <div class="flex items-center text-primary  xxxs:space-x-2 sm:space-x-10">
                       <img src="/right.png" class="right-icon" />
 
-                      <h2 class="text-lg flex items-center">
+                      <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                         {{ $t("whySaveWithUs.reasons[1]") }}
                       </h2>
                     </div>
                   </div>
                   
-                  <div class="gap-4 p-4 border-b border-gray-200">
-                    <div class="flex items-center text-primary space-x-10">
+                  <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding border-b border-gray-200">
+                    <div class="flex items-center text-primary  xxxs:space-x-2 sm:space-x-10">
                       <img src="/right.png" class="right-icon" />
 
-                      <h2 class="text-lg flex items-center">
+                      <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                         {{ $t("whySaveWithUs.reasons[2]") }}
                       </h2>
                     </div>
                   </div>
                   
-                  <div class="gap-4 p-4 border-b border-gray-200">
-                    <div class="flex items-center text-primary space-x-10">
+                  <div class="xxxs:gap-1 sm:gap-4 loan-comp-padding border-b border-gray-200">
+                    <div class="flex items-center text-primary  xxxs:space-x-2 sm:space-x-10">
                       <img src="/right.png" class="right-icon" />
 
-                      <h2 class="text-lg flex items-center">
+                      <h2 class="xxxs:text-sm xs:text-base sm:text-lg flex items-center">
                         {{ $t("whySaveWithUs.reasons[3]") }}
                       </h2>
                     </div>
@@ -56,7 +57,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="xxxs:text-base sm:text-lg">
               <ul class="list-disc pl-5">
                 <h1 class="saving-title text-center">
                   {{ $t("loans.types.title") }}
@@ -221,124 +222,6 @@
                     <li>{{ $t("loans.guaranteeTypes.propertyGuarantee.fixedAssetGuarantee.details[1]") }}</li>
                 </ul>
               </ul>
-
-              
-
-
-              <!-- <h1 class="saving-title">Loan amount and repayment period</h1>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">Consumer loan</h1>
-                <li>
-                  5/Five months/ and above 15% regular savings and 10% lottery
-                  Own member gets a consumer loan, the loan limit is 300,000.00
-                  and the repayment period is up to It will be up to 30 months.
-                </li>
-                <li>
-                  6/six months/ and above 15% regular savings and 10% interest
-                  Own member gets a consumer loan, the loan limit is 400,000.00
-                  and the repayment period is up to It will be up to 36 months.
-                </li>
-              </ul>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">Business loan</h1>
-                <li>
-                  5/Five months/ and above 20% normal savings and 10% lottery
-                  Your member can get a business loan with a loan limit of
-                  500,000.00 and a repayment period of up to It will be up to 36
-                  months.
-                </li>
-                <li>
-                  6/six months/more than 20% normal savings and 10% lottery Own
-                  member gets a business loan the loan limit is 750,000.00 and
-                  the repayment period is up to It will be up to 48 months.
-                </li>
-                <li>
-                  12/twelve months/ more than 20% regular savings and 5%
-                  interest Own member gets a business loan and the loan limit is
-                  1,500,000.00 and the repayment period It will be up to 60
-                  months
-                </li>
-              </ul>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">
-                  Loans for home purchase, construction and renovation
-                </h1>
-                <li>
-                  20% normal savings of 6/six months/ and above in a row to
-                  borrow a home loan A member who saves and buys a 10% lot gets
-                  a home loan with a loan limit of 2,000,000.00. The repayment
-                  period will be up to 60 months.
-                </li>
-                <li>
-                  8/eight months/ and above 20% regular savings and 10% interest
-                  Own member gets a home loan and the loan limit is 3,000,000.00
-                  and the repayment period is up to It will be up to 84 months.
-                </li>
-                <li>
-                  12/twelve months/ and above 18% regular savings and 7% A
-                  member who owns a lot gets a home loan and the loan ceiling is
-                  5,000,000.00 and the repayment period is It will be up to 84
-                  months.
-                </li>
-              </ul>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">Car loan</h1>
-                <li>
-                  20% regular savings of 6 months and more and 10% of lotteries
-                  A member gets a car loan with a loan limit of 2,000,000.00 and
-                  a repayment period will be up to 48 months.
-                </li>
-                <li>
-                  8/eight months/ and more who has saved 20% regular savings and
-                  bought 5% lottery A member gets a car loan with a loan limit
-                  of up to 3,000,000.00 and the repayment period will be up to
-                  60 months.
-                </li>
-              </ul>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">Special short-term loans</h1>
-                <li>
-                  For four months and more, he has saved 25% regular savings and
-                  bought 5% lotteries and A special short-term loan for members
-                  in business with no interest at 10% commission You will get it
-                  by paying only /Commission/ and the loan limit is 400,000.00
-                  and the repayment period It will last up to four months. The
-                  loan repayment period is twice a month every fifteen days
-                </li>
-                <li>
-                  6 months continuous borrowing 20% ​​regular savings and 5% lot
-                  purchase and business Special short-term loan for working
-                  members with no interest paid at 15% commission only. You will
-                  get it by paying, and the loan ceiling is 600,000.00 and the
-                  repayment period will be up to 6 months. The loan repayment
-                  period will be twice a month every fifteen days
-                </li>
-              </ul>
-
-              <ul class="list-disc pl-5">
-                <h1 class="saving-title">Salary loan</h1>
-                <li>
-                  For member of government employees, bank employees, insurance
-                  employees and hospital employees 15% advance savings and 5% of
-                  6 months net salary for emergency loans Complete the lot and
-                  submit a letter of guarantee from the office where you are
-                  working for a loan that will be repaid in one year You can
-                  borrow.
-                </li>
-                <li>
-                  6 months continuous borrowing 20% ​​regular savings and 5% lot
-                  purchase and business Special short-term loan for working
-                  members with no interest paid at 15% commission only. You will
-                  get it by paying, and the loan ceiling is 600,000.00 and the
-                  repayment period will be up to 6 months. The loan repayment
-                  period will be twice a month every fifteen days
-                </li>
-              </ul> -->
             </div>
           </div>
         </div>
@@ -359,9 +242,40 @@ useHead({
     font-size: larger;
 }
 
-.right-icon {
+.loan-title-padding {
+  padding: min(3rem, 6%);
+}
+
+.loan-comp-padding {
+  padding: min(1rem, 2%);
+}
+
+@media (min-width: 200px) {
+  .right-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .right-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .right-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .right-icon {
     width: 3rem;
     height: 3rem;
+  }
 }
 
 </style>

@@ -17,7 +17,7 @@
       <div class="body-padding_margin">
         <div class="container lg:gap-20 xl:gap-32">
           <div
-            class="carousel-content flex justify-center items-center text-center gap-12"
+            class="carousel-content flex justify-center items-center text-center lg:gap-8 xl:gap-12"
           >
             <button @click="prevImage">
               <svg
@@ -37,7 +37,7 @@
               <div class="homecontent space-y-6">
                 <div>
                   <h1
-                    class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-4 lg:py-8"
+                    class="text-primary hero-title font-oswald xxxs:py-2 lg:py-8"
                   >
                     {{ $t(`heroText.${title[currentSlide]}`) }}
                   </h1>
@@ -46,7 +46,7 @@
                 <div class="flex justify-center item-center">
                   <nuxt-link
                     :to="link[currentSlide]"
-                    class="etcare-button xxxs:text-xs xs:text-sm sm:text-base md:text-lg xxl:text-xl px-6 py-1 md:px-10 xxl:px-14 md:py-1 xxl:py-2 items-center font-oswald"
+                    class="etcare-button hero-title-button px-6 py-1 md:px-10 xxl:px-14 md:py-1 items-center font-oswald"
                   >
                     {{ $t("readMore") }}
                   </nuxt-link>
@@ -136,7 +136,7 @@ const startSlideshow = () => {
     if (currentSlide.value >= slides.value.length) {
       currentSlide.value = 0;
     }
-  }, 30000);
+  }, 20000);
 };
 
 const nextImage = () => {
@@ -214,7 +214,6 @@ img {
     padding-bottom: 3.5rem;
     color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme("fontSize.xxs");
     width: 100%;
     border-top: 0px solid theme("colors.primary");
     transition: border-top 0.5s ease-in-out;
@@ -236,7 +235,6 @@ img {
     padding-bottom: 3.5rem;
     color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme("fontSize.xs");
     width: 100%;
   }
 }
@@ -260,7 +258,6 @@ img {
     padding-bottom: 5.5rem;
     color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme("fontSize.base");
     width: 100%;
     border-top: 0px solid transparent;
     transition: border-top-color 0.3s ease-in-out,
@@ -322,7 +319,6 @@ img {
     padding-bottom: 5.5rem;
     color: theme("colors.secondary");
     font-weight: bolder;
-    font-size: theme("fontSize.lg");
     width: 100%;
     border-top: 0px solid transparent;
     transition: border-top-color 0.3s ease, border-top-width 0.3s ease;
@@ -396,6 +392,7 @@ img {
 
 .link-home {
   position: relative;
+    font-size: clamp(0.7rem, calc(1vw + 0.25rem), 1.5rem);
 }
 
 .link-home::after {
@@ -435,4 +432,11 @@ img {
 .link-home:hover::after {
   transition-delay: 0s;
 }
+
+.hero-title {
+    font-size: clamp(1rem, calc(2vw + 0.65rem), 2.5rem);
+}
+
+.hero-title-button {
+    font-size: clamp(0.7rem, calc(1vw + 0.25rem), 1.5rem);}
 </style>

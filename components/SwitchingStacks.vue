@@ -434,7 +434,7 @@ img {
 }
 
 .hero-title {
-    font-size: clamp(1rem, calc(2vw + 0.65rem), 2.5rem);
+    font-size: clamp(1rem, calc(2vw + 0.6rem), 2.5rem);
 }
 
 .hero-title-button {

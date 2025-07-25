@@ -2,19 +2,19 @@
   <div class="body-padding_margin">
     <div class="container">
       <div class="py-8">
-        <!-- Image Slider -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center"
+        >
           <img
             v-for="(photo, index) in visiblePhotos"
             :key="index"
             :src="photo.url"
             alt="Photo"
-            class="slider-photo"
-            @click="showPhoto(index)"
+            class="hover-photo"
+            @click="showPhoto(getPhotoIndex(index))"
           />
         </div>
 
-        <!-- Modal -->
         <div v-if="selectedPhoto !== null" class="modal" @click="closeModal">
           <img
             :src="photos[selectedPhoto].url"
@@ -29,43 +29,50 @@
 
 <script>
 export default {
-  name: "ImageSlider",
   data() {
     return {
       photos: [
-        { url: "/photo/gallary-1.jpg" },
-        { url: "/photo/gallary-2.jpg" },
-        { url: "/photo/gallary-3.jpg" },
-        { url: "/photo/gallary-4.jpg" },
-        { url: "/photo/gallary-5.jpg" },
-        { url: "/photo/gallary-3.jpg" },
-        { url: "/photo/gallary-4.jpg" },
-        { url: "/photo/gallary-5.jpg" },
-        { url: "/photo/gallary-3.jpg" },
-        { url: "/photo/gallary-4.jpg" },
-        { url: "/photo/gallary-5.jpg" },
+        { url: "/photo/gallary-1.png" },
+        { url: "/photo/gallary-2.png" },
+        { url: "/photo/gallary-3.png" },
+        { url: "/photo/gallary-4.png" },
+        { url: "/photo/gallary-5.png" },
+        { url: "/photo/gallary-6.png" },
+        { url: "/photo/gallary-7.png" },
+        { url: "/photo/gallary-8.png" },
+        { url: "/photo/gallary-9.png" },
+        { url: "/photo/gallary-10.png" },
       ],
+      startIndex: 0,
       selectedPhoto: null,
-      screenWidth: window.innerWidth,
+      visibleCount: 5, // default
+      interval: null,
     };
   },
   computed: {
     visiblePhotos() {
-      if (this.screenWidth < 480) return this.photos.slice(0, 2);
-      if (this.screenWidth < 768) return this.photos.slice(0, 3);
-      if (this.screenWidth < 1024) return this.photos.slice(0, 4);
-      return this.photos;
+      const result = [];
+      for (let i = 0; i < this.visibleCount; i++) {
+        result.push(this.photos[(this.startIndex + i) % this.photos.length]);
+      }
+      return result;
     },
   },
   mounted() {
-    window.addEventListener("resize", this.updateScreenWidth);
+    this.setVisibleCount();
+    window.addEventListener("resize", this.setVisibleCount);
+
+    this.interval = setInterval(() => {
+      this.startIndex = (this.startIndex + 1) % this.photos.length;
+    }, 5000);
   },
   beforeUnmount() {
-    window.removeEventListener("resize", this.updateScreenWidth);
+    clearInterval(this.interval);
+    window.removeEventListener("resize", this.setVisibleCount);
   },
   methods: {
-    updateScreenWidth() {
-      this.screenWidth = window.innerWidth;
+    getPhotoIndex(offset) {
+      return (this.startIndex + offset) % this.photos.length;
     },
     showPhoto(index) {
       this.selectedPhoto = index;
@@ -73,23 +80,33 @@ export default {
     closeModal() {
       this.selectedPhoto = null;
     },
+    setVisibleCount() {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        this.visibleCount = 5;
+      } else if (width >= 768) {
+        this.visibleCount = 4;
+      } else if (width >= 480) {
+        this.visibleCount = 2;
+      } else {
+        this.visibleCount = 1;
+      }
+    },
   },
 };
 </script>
 
-<style scoped>
-.slider-photo {
-  width: 220px;
-  height: 220px;
+<style>
+.hover-photo {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  flex-shrink: 0;
   cursor: pointer;
-  border-radius: 8px;
-  background-position: cover;
   transition: transform 0.3s ease-in-out;
 }
 
-.slider-photo:hover {
+.hover-photo:hover {
   transform: scale(1.05);
 }
 
@@ -106,10 +123,21 @@ export default {
   z-index: 1111;
 }
 
-.modal-img {
-  width: 90%;
-  height: auto;
-  max-height: 80%;
-  object-fit: contain;
+@media (min-width: 0) {
+  .modal-img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-img {
+    width: 60%;
+    height: 80%;
+  }
 }
 </style>

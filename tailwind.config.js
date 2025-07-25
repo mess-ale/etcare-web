@@ -19,6 +19,7 @@ export default {
         },
         fontFamily: {
           oswald: ['Oswald', 'sans-serif'],
+          abyssinica: ['"Abyssinica SIL"', 'serif'],
           roboto: ['Roboto', 'sans-serif'],
           Madimi: ['Madimi One', 'sans-serif'],
           sans: ['sans-serif'],

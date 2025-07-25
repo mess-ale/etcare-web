@@ -1,5 +1,5 @@
 <template>
-  <div class="web-body">
+  <div class="web-body font-abyssinica">
     <Preloader />
 
     <header
@@ -313,48 +313,14 @@
               </div>
 
               <div class="items-center flex space-x-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2em"
-                  height="2em"
-                  viewBox="0 0 24 24"
+                   <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M7 17q-.825 0-1.412-.587T5 15V5q0-.825.588-1.412T7 3h14q.825 0 1.413.588T23 5v10q0 .825-.587 1.413T21 17zm7-4.7L7 7.425V15h14V7.425zm0-2.45L21 5H7zM3 21q-.825 0-1.412-.587T1 19V6.5h2V19h16.5v2zM21 7.35V5H7v2.35V5h14z" /></svg>
+
+                <a
+                  href="mailto:saccoetcare051@gmail.com"
+                  class="links"
+                  target="_blank"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-dasharray="64"
-                      stroke-dashoffset="64"
-                      d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"
-                    >
-                      <animate
-                        fill="freeze"
-                        attributeName="stroke-dashoffset"
-                        dur="0.6s"
-                        values="64;0"
-                      ></animate>
-                    </path>
-                    <path
-                      stroke-dasharray="24"
-                      stroke-dashoffset="24"
-                      d="M3 6.5l9 5.5l9 -5.5"
-                    >
-                      <animate
-                        fill="freeze"
-                        attributeName="stroke-dashoffset"
-                        begin="0.6s"
-                        dur="0.2s"
-                        values="24;0"
-                      ></animate>
-                    </path>
-                  </g>
-                </svg>
-                <a href="mailto:saccoetcare051@gmail.com" class="links">
-                  <h4>saccosetcare@gmail.com</h4>
+                  <h4>saccoetcare051@ gmail.com</h4>
                 </a>
               </div>
 
@@ -617,6 +583,7 @@ onBeforeUnmount(() => {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
 
 @media (min-width: 200px) {
   .body-padding_margin {
@@ -684,6 +651,7 @@ onBeforeUnmount(() => {
   background-color: theme("colors.primary");
   color: theme("colors.white");
   border-radius: 10px 10px 10px 0;
+  font-family: theme("fontFamily.abyssinica");
   border: none;
   cursor: pointer;
   transition: all 0.35s ease-in-out;

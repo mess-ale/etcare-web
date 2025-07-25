@@ -172,7 +172,9 @@
               <label
                 for="phone"
                 class="block text-sm font-medium text-primary"
-                >{{ $t("membership.etcareMembershipForm.fields[6].label") }}</label
+                >{{
+                  $t("membership.etcareMembershipForm.fields[6].label")
+                }}</label
               >
               <input
                 v-model="form.phone"
@@ -245,7 +247,6 @@
                 @change="handleReceiptIdUploadBack"
               />
             </div>
-          
           </div>
 
           <div class="mb-6">
@@ -270,7 +271,12 @@
               type="submit"
               class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
             >
-              {{ $t("membership.etcareMembershipForm.submitButton") }}
+              <div v-if="uploading">
+                {{ $t("membership.etcareMembershipForm.submitButton") }}
+              </div>
+              <div v-else>
+                {{ $t("uploading") }}
+              </div>
             </button>
           </div>
         </form>
@@ -438,6 +444,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 const { $axios } = useNuxtApp();
+const uploading = ref(true);
 
 const form = ref({
   firstName: "",
@@ -495,6 +502,7 @@ const handleSubmit = async () => {
   }
 
   try {
+    uploading.value = false;
     const response = await $axios.post("/submissions/", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
@@ -519,6 +527,7 @@ const handleSubmit = async () => {
     form.value.receiptBId = null;
     form.value.bankReceipt = null;
     router.push("/success");
+    uploading.value = true;
   } catch (error) {
     console.error("Submission failed:", error);
     // Handle error (show error message)

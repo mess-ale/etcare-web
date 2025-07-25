@@ -143,6 +143,14 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.video-wrapper {
+  border-radius: 0;
+}
+
+.video-wrapper:hover {
+  scale: 1;
+}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -150,7 +158,7 @@ onMounted(() => {
 }
 
 .blog-title-detail {
-  font-size: clamp(1rem, calc(4vw + 1rem), 2.25rem);
+  font-size: clamp(1.4rem, calc(1.067vw + 1rem), 2.25rem);
 }
 
 .video-wrapper {

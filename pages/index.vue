@@ -40,22 +40,30 @@
       <div class="body-padding_margin">
         <div class="container">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
+            <div
+              class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4"
+            >
               <div class="flex items-bottoms">
                 <img src="/vision.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.one") }}</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">
+                    {{ $t("number.one") }}
+                  </h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("visionTitle") }}</h3>
               <p>{{ $t("visionText") }}</p>
             </div>
 
-            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
+            <div
+              class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4"
+            >
               <div class="flex items-bottoms">
                 <img src="/Mission.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.two") }}</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">
+                    {{ $t("number.two") }}
+                  </h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("missionTitle") }}</h3>
@@ -64,17 +72,58 @@
               </p>
             </div>
 
-            <div class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4">
+            <div
+              class="value-boje-section shadow-md xxxs:space-y-2 md:space-y-4"
+            >
               <div class="flex items-bottoms">
                 <img src="/object.png" class="h-16 w-16" alt="vision" />
                 <div class="cercle-nub">
-                  <h1 class="cercle-nub-on font-bold text-2xl">{{ $t("number.three") }}</h1>
+                  <h1 class="cercle-nub-on font-bold text-2xl">
+                    {{ $t("number.three") }}
+                  </h1>
                 </div>
               </div>
               <h3 class="text-3xl font-bold">{{ $t("valueTitle") }}</h3>
               <p>
                 {{ $t("valueText") }}
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-padding_margin">
+      <div class="container">
+        <div class="youtube-video-continar xxxs:mb-6 md:mb-12 xxxs:mt-2 md:mt-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-secondary">
+            <div class="video-wrapper">
+              <iframe
+                width="1500px"
+                height="844px"
+                src="https://www.youtube.com/embed/VGi-edO1wXk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class=" flex justify-center items-center">
+              <div class="text-content">
+                <h1 class="youtext-font font-oswald font-abyssinica">
+                  {{ $t("youtubeVideotext1") }}
+                </h1>
+
+                <div class="flex justify-center item-center pt-8">
+                  <nuxt-link
+                    to="/blog/23"
+                    class="etcare-button hero-title-button px-6 py-1 md:px-10 xxl:px-14 md:py-1 items-center font-oswald"
+                  >
+                    {{ $t("readMore") }}
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -103,9 +152,7 @@
           </h1>
 
           <div class="flex justify-center pb-20">
-            <p
-              class="p-blog text-primary text-center font-oswald font-bold"
-            >
+            <p class="p-blog text-primary text-center font-oswald font-bold">
               {{ $t("blogSubHeader") }}
             </p>
           </div>
@@ -158,6 +205,42 @@ onMounted(() => {
 </script>
 
 <style>
+.video-wrapper {
+  position: relative;
+  padding-bottom: 66.25%; /* 16:9 aspect ratio */
+  height: 0;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  max-width: 100%;
+  transition: all 0.35s ease-in-out;
+}
+
+.video-wrapper:hover {
+  scale: 1.01;
+  border-radius: 3px;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-video-continar {
+  /* padding: min(1.5rem, 8%) min(2.5rem, 8%); */
+  /* background-color: #ffcac9; */
+  border-radius: 8px;
+}
+
+.youtext-font {
+    font-size: clamp(1.125rem, calc(1.4vw + 0.65rem), 2rem);
+    /* font-weight: bold; */
+    text-align: center;
+}
+
 .etcare-home {
   overflow-x: hidden;
 }
@@ -170,7 +253,7 @@ onMounted(() => {
 
 .p-blog {
   /* padding: min(5em, 8%); */
-    font-size: clamp(1rem, calc(4vw + 1rem), 2.25rem);
+  font-size: clamp(1rem, calc(4vw + 1rem), 2.25rem);
 }
 
 .value-boje-section {

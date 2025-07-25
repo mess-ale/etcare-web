@@ -16,7 +16,7 @@
         <iframe
           width="1500px"
           height="844px"
-          src="https://www.youtube.com/embed/VGi-edO1wXk"
+          :src="link"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -63,6 +63,14 @@ export default {
 </script>
 
 <style scoped>
+.video-wrapper {
+  border-radius: 0;
+}
+
+.video-wrapper:hover {
+  scale: 1;
+}
+
 .blog-button {
   transition: all 0.5s ease-in-out;
   border-radius: 15px;
@@ -79,22 +87,5 @@ export default {
 
 .blog-title {
   padding: min(0.8rem, 7%) min(1.5rem, 7%);
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 66.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.video-wrapper iframe,
-.video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 </style>
